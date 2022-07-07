@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- OWLCAROUSEL -->
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+    <style>
+        html.sr .load-hidden {
+            visibility: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: rgb(238, 238, 238);
+        }
+        
+        .home {
+            background: rgb(240, 74, 235);
+            height: 90vh;
+            width: auto;
+        }
+        
+        .home .img {
+            background: rgb(255, 255, 255);
+            height: 350px;
+            width: 350px;
+            transform: rotate(260deg);
+            /* position: absolute; */
+            /* left: 100px; */
+            /* top: 100px; */
+        }
+        
+        .home .text {
+            margin-left: 50px;
+            max-width: 650px;
+        }
+        
+        .home .text h2 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        
+        .home .text a.btn {
+            padding: 7px 30px;
+            border-radius: 10px;
+        }
+        /* STYLING PROFILE */
+        
+        .profile .cards {
+            height: 500px;
+            background: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .profile .cards .img {
+            background: rgb(186, 186, 186);
+            height: inherit;
+            width: 40%;
+            max-width: 400px;
+            border-radius: 20px 20px 20px 20px;
+        }
+        
+        .profile .cards .content {
+            width: 60%;
+        }
+        /* STYLING EDUCATIONS */
+        
+        .educations .owl-carousel .owl-stage {
+            height: 240px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .educations .owl-carousel .education-item h4 {
+            visibility: hidden;
+            cursor: pointer;
+            position: absolute;
+        }
+        
+        .educations .owl-carousel .education-item {
+            transition: 0.3s;
+            height: 200px;
+        }
+        
+        .educations .owl-carousel .education-item img {
+            object-fit: cover;
+            transition: 0.3s;
+            height: 200px;
+            cursor: pointer;
+        }
+        
+        .educations .owl-carousel .education-item:hover {
+            background: rgb(216, 67, 216);
+            height: 230px;
+            color: #fff;
+            font-size: 24px;
+        }
+        
+        .educations .owl-carousel .education-item:hover img {
+            height: 230px;
+        }
+        
+        .educations .owl-carousel .education-item:hover h4 {
+            background: rgb(216, 67, 216);
+            visibility: visible;
+            font-size: 28px;
+        }
+        /* STYLING PROJECTS */
+        
+        .projects .project-card .projects-item {
+            height: 400px;
+            background: rgb(216, 67, 216);
+        }
+        
+        .projects .project-card .projects-item h2 {
+            font-size: 60px;
+        }
+        
+        .projects .project-card .projects-item a.btn {
+            font-size: 20px;
+            padding: 10px 25px;
+        }
+        
+        .btn-white {
+            background: #fff!important;
+            border: none!important;
+            color: rgb(216, 67, 216)!important;
+            box-shadow: 0 0 7px 2px rgb(216, 67, 216)!important
+        }
+        
+        .btn-white:hover {
+            background: rgb(243, 128, 243)!important;
+            border: 2px solid rgb(204, 58, 204)!important;
+            color: #fff!important;
+        }
+        /* STYLING CONTACT */
+        
+        .contact .wrapper {
+            height: fit-content;
+        }
+        
+        .contact .inputs {
+            width: 40vw;
+        }
+        /* STYLING FOOTER */
+        
+        .footer {
+            background: rgb(155, 155, 155);
+        }
+        /* STYLING NAV DOTS */
+        
+        section {
+            width: 100%;
+        }
+        
+        nav#dot-nav {
+            position: fixed;
+            right: 30px;
+            z-index: 99;
+        }
+        
+        nav#dot-nav a {
+            border: 1px solid rgb(171, 23, 166);
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            display: block;
+            margin: 10px;
+            -webkit-transition: all 0.4;
+            transition: all 0.4;
+        }
+        
+        nav#dot-nav a.active {
+            background: rgb(171, 23, 166);
+        }
+        
+        nav#dot-nav.red a {
+            border: 1px solid #db2853;
+        }
+        
+        nav#dot-nav.red a.active,
+        nav#dot-nav.red a:first-child {
+            background: #db2853;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav id="dot-nav">
+    </nav> -->
+
+    <section id="home">
+        <div class="home mb-3 p-4 d-flex justify-content-center align-items-center">
+            <div class="img home-img rounded-20"></div>
+            <div class="text">
+                <h2 class="heading-name">I'm Akwan Cakra Tajimalela</h2>
+                <p class="heading-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ullam sit dolorum debitis repudiandae voluptate natus rem minus laudantium reiciendis.</p>
+                <a href="#" class="btn btn-home btn-primary rounded-15">Next</a>
+            </div>
+        </div>
+    </section>
+    <section id="profile">
+        <div class="container profile my-5">
+            <h2 class="fw-bold text-center my-4">Profile</h2>
+            <div class="cards rounded-20 d-flex">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="p-3">
+                        <h5>Akwan Cakra Tajimalela</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container educations my-5">
+            <h2 class="fw-bold">Educations</h2>
+            <div class="owl-carousel my-5">
+                <div class="education-item rounded-15 p-2 d-flex justify-content-center align-items-center position-relative">
+                    <img src="img/school (2).png" alt="SDN Jatirahayu 1" class="rounded-15">
+                    <h4 class="mb-0">SDN Jatirahayu 1</h4>
+                </div>
+                <div class="education-item rounded-15 p-2 d-flex justify-content-center align-items-center position-relative">
+                    <img src="img/school (1).png" alt="SMPN 20 Kota Bekasi" class="rounded-15">
+                    <h4 class="mb-0">SMPN 20 Kota Bekasi</h4>
+                </div>
+                <div class="education-item rounded-15 p-2 d-flex justify-content-center align-items-center position-relative">
+                    <img src="img/school (3).png" alt="SMKN 1 Kota Bekasi" class="rounded-15">
+                    <h4 class="mb-0">SMKN 1 Kota Bekasi</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container my-5 skills">
+            <h2 class="fw-bold">Skills</h2>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container projects my-5">
+            <h2 class="fw-bold text-center">Projects</h2>
+            <div class="row g-0 project-card">
+                <div class="col-6 col-md-4 text-center">
+                    <div class="m-2 p-2 projects-item rounded-15">
+                        <h2 class="fw-bold text-white">Pergiin</h2><a href="#" class="btn btn-white rounded-15 w-100 fw-bold">Detail</a></div>
+                </div>
+                <div class="col-6 col-md-4 text-center">
+                    <div class="m-2 p-2 projects-item rounded-15">
+                        <h2 class="fw-bold text-white">UKOM</h2><a href="#" class="btn btn-white rounded-15 w-100 fw-bold">Detail</a></div>
+                </div>
+                <div class="col-6 col-md-4 text-center">
+                    <div class="m-2 p-2 projects-item rounded-15">
+                        <h2 class="fw-bold text-white">BKK Satu</h2><a href="#" class="btn btn-white rounded-15 w-100 fw-bold">Detail</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container contact my-5">
+            <h2 class="fw-bold text-center">Contact</h2>
+            <p class="text-center">Interested of me.</p>
+            <div class="d-flex align-items-center justify-content-around wrapper">
+                <div class="inputs">
+                    <form action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-15" id="name" placeholder="Name">
+                            <label for="name" class="form-label">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-15" id="email" placeholder="name@example.com">
+                            <label for="email">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control rounded-15" placeholder="Your message here" id="message" style="height: 120px"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="button" class="btn btn-primary fw-bold rounded-15 w-100 mt-4 py-2">Send</button>
+                    </form>
+                </div>
+                <div class="right">
+                    <img src="img/bg-svg.svg" alt="Contact Illustration" height="400px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer text-center py-4">
+        Made with ❤ by <a href="https://facebook.com/akwancakra666" target="_blank" class="text-black"> Akwan Cakra Tajimalela</a>
+    </div>
+
+    <!-- SCRIPT -->
+    <!-- DOTNAV -->
+    <script src="js/dot-nav.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- OWLCAROUSEL -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script>
+        ScrollReveal({
+            reset: true
+        });
+
+        ScrollReveal().reveal('.home-img', {
+            delay: 500,
+            rotate: {
+                x: 20,
+                z: 20
+            }
+        });
+
+        ScrollReveal().reveal('.text', {
+            delay: 500,
+        });
+
+        ScrollReveal().reveal('.profile', {
+            origin: "bottom",
+            distance: "50px",
+            easing: "cubic-bezier(.37,.01,.74,1)",
+        });
+
+        ScrollReveal().reveal('.educations', {
+            origin: "bottom",
+            distance: "50px",
+            easing: "cubic-bezier(.37,.01,.74,1)",
+        });
+
+        ScrollReveal().reveal('.education-item', {
+            interval: 200
+        });
+
+        ScrollReveal().reveal('.projects-item', {
+            interval: 200
+        });
+
+        ScrollReveal().reveal('.skills', {
+            origin: "bottom",
+            distance: "50px",
+            easing: "cubic-bezier(.37,.01,.74,1)",
+        });
+
+        ScrollReveal().reveal('.projects', {
+            origin: "bottom",
+            distance: "50px",
+            easing: "cubic-bezier(.37,.01,.74,1)",
+        });
+
+        ScrollReveal().reveal('.contact', {
+            origin: "bottom",
+            distance: "50px",
+            easing: "cubic-bezier(.37,.01,.74,1)",
+        });
+
+        $('.owl-carousel').owlCarousel({
+            // loop: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
