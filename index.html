@@ -57,9 +57,6 @@
         
         .profile-swiper .swiper-slide {
             text-align: center;
-            /* font-size: 18px; */
-            /* background: #fff; */
-            /* Center slide text vertically */
             display: -webkit-box;
             display: -ms-flexbox;
             display: -webkit-flex;
@@ -81,17 +78,6 @@
         
         .profile .swiper-slide-active {
             filter: blur(0px);
-        }
-        /* SWIPER */
-        
-        .swiper-slide.swiper-slide-visible.swiper-slide-next {
-            /* height: 100px;
-            overflow-y: hidden; */
-        }
-        
-        .swiper-slide.swiper-slide-visible.swiper-slide-prev {
-            /* height: 100px; */
-            /* overflow: hidden; */
         }
     </style>
 </head>
@@ -578,10 +564,6 @@
                 modifier: 1,
                 slideShadows: true,
             },
-            // autoplay: {
-            //     delay: 1500,
-            //     disableOnInteraction: false,
-            // },
         });
 
         let eduSwiper = new Swiper('.edu-swiper', {
@@ -623,10 +605,6 @@
             distance: "50px",
             easing: "cubic-bezier(.37,.01,.74,1)",
         });
-
-        // ScrollReveal().reveal('.edu-item.swiper-slide', {
-        //     interval: 200
-        // });
 
         ScrollReveal().reveal('.project-item', {
             interval: 200
