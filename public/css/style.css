@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+* {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.text-black {
+    color: #333333!important;
+}
+
+.rounded-15 {
+    border-radius: 15px!important;
+    -webkit-border-radius: 15px!important;
+    -moz-border-radius: 15px!important;
+    -ms-border-radius: 15px!important;
+    -o-border-radius: 15px!important;
+}
+
+.rounded-20 {
+    border-radius: 20px!important;
+    -webkit-border-radius: 20px!important;
+    -moz-border-radius: 20px!important;
+    -ms-border-radius: 20px!important;
+    -o-border-radius: 20px!important;
+}
