@@ -1,1343 +1,1570 @@
 <!DOCTYPE html>
 <html lang="en" class="sr scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akwan's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="img/logo-akwan.png" />
-    <!-- LOCAL CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- SWIPER JS -->
-    <link rel="stylesheet" href="css/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="css/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/output.css" />
-    <!-- BOXICON ICON -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      html.sr .load-hidden {
-        visibility: hidden;
-      }
-      /* STYLING HOME */
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Akwan's Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="img/logo-akwan.png" />
+        <!-- LOCAL CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- SCROLL REVEAL -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-- SWIPER JS -->
+        <link rel="stylesheet" href="css/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="css/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/output.css" />
+        <!-- BOXICON ICON -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            html.sr .load-hidden {
+                visibility: hidden;
+            }
+            /* STYLING HOME */
 
-      .home .texts {
-        max-width: 70vw;
-        margin-right: -50px;
-        margin-bottom: -160px;
-        z-index: 2;
-      }
+            .home .texts {
+                max-width: 70vw;
+                margin-right: -50px;
+                margin-bottom: -160px;
+                z-index: 2;
+            }
 
-      .home .texts p {
-        max-width: 45vw;
-      }
+            .home .texts p {
+                max-width: 45vw;
+            }
 
-      .home .img {
-        height: 380px;
-        width: 270px;
-        min-width: 250px;
-        min-height: 150px;
-      }
-      /* STYLING PROFILE */
+            .home .img {
+                height: 380px;
+                width: 270px;
+                min-width: 250px;
+                min-height: 150px;
+            }
+            /* STYLING PROFILE */
 
-      .profile {
-        margin: 35px 0px;
-      }
+            .profile {
+                margin: 35px 0px;
+            }
 
-      .profile .data .img {
-        height: 250px;
-        width: 150px;
-        min-width: 200px;
-        min-height: 100px;
-        background: rgb(144, 144, 144);
-      }
+            .profile .data .img {
+                height: 250px;
+                width: 150px;
+                min-width: 200px;
+                min-height: 100px;
+                background: rgb(144, 144, 144);
+            }
 
-      .profile-swiper .swiper-slide {
-        text-align: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        justify-content: around;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
+            .profile-swiper .swiper-slide {
+                text-align: center;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                justify-content: around;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
 
-      .profile .swiper-slide {
-        filter: blur(2px);
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-      }
+            .profile .swiper-slide {
+                filter: blur(2px);
+                box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            }
 
-      .profile .swiper-slide-active {
-        filter: none;
-      }
+            .profile .swiper-slide-active {
+                filter: none;
+            }
 
-      ::-webkit-scrollbar-track {
-        background-color: #c8c8c8;
-      }
+            ::-webkit-scrollbar-track {
+                background-color: #c8c8c8;
+            }
 
-      ::-webkit-scrollbar {
-        width: 12px;
-        background-color: #c8c8c8;
-      }
+            ::-webkit-scrollbar {
+                width: 12px;
+                background-color: #c8c8c8;
+            }
 
-      ::-webkit-scrollbar-thumb {
-        background-color: #3a424f;
-      }
-    </style>
-  </head>
+            ::-webkit-scrollbar-thumb {
+                background-color: #3a424f;
+            }
+        </style>
+    </head>
 
-  <body class="bg-gray-800 text-white">
-    <!-- Component Start -->
+    <body class="bg-gray-800 text-white">
+        <!-- Component Start -->
 
-    <div class="main-wrapper p-3 overflow-hidden">
-      <!-- DOT SIDEBAR -->
-      <div
-        class="dot-sidebar flex items-center justify-end h-screen fixed z-10 right-0"
-      >
-        <div class="mr-3 flex flex-col">
-          <button
-            class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-            id="homeNav"
-          ></button>
-          <button
-            class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-            id="profileNav"
-          ></button>
-          <button
-            class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-            id="educationNav"
-          ></button>
-          <button
-            class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-            id="workNav"
-          ></button>
-          <button
-            class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-            id="projectNav"
-          ></button>
-          <button
-            class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-            id="contactNav"
-          ></button>
-        </div>
-      </div>
-
-      <!-- HOME SECTION -->
-      <section class="home h-screen" id="home">
-        <div class="flex justify-between relative">
-          <div class="top-left-add absolute">
-            <div class="border border-white w-[70px]"></div>
-            <div class="border-l-2 border-white h-[30px]"></div>
-          </div>
-          <div class="top-right-add absolute right-0 top-0">
-            <div class="absolute right-0">
-              <div class="bg-white h-[15px] w-[15px]"></div>
-            </div>
+        <div class="main-wrapper p-3 overflow-hidden">
+            <!-- DOT SIDEBAR -->
             <div
-              class="border-t border-r-2 border-white mr-[6px] mt-[6px] w-[120px] h-[50px]"
+                class="dot-sidebar flex items-center justify-end h-screen fixed z-10 right-0"
             >
-              <span class="absolute text-[10px] mt-[-8px] ml-[-18px]">20</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center h-full">
-          <div class="texts relative">
-            <div class="dots absolute" style="top: -30px; left: -30px">
-              <div class="flex">
-                <div
-                  class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                ></div>
-                <div
-                  class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                ></div>
-                <div
-                  class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                ></div>
-              </div>
-              <div class="flex">
-                <div
-                  class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                ></div>
-                <div
-                  class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                ></div>
-              </div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-            </div>
-            <h1 class="text-5xl font-bold border-b border-white-700 w-fit">
-              Akwan Cakra Tajimalela
-            </h1>
-            <p>
-              I'm a Software Engineering student at Indonesia University of
-              Education.
-            </p>
-          </div>
-          <div class="absolute md:relative img-wrapper">
-            <div class="img bg-gray-400 bg-cover bg-center w-[300px] h-[350px]">
-              <img
-                src="img/akwan.jpg"
-                alt="Gambar akwan cakra"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <div class="dots absolute" style="bottom: -15px; right: -15px">
-              <div class="flex">
-                <div
-                  class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                ></div>
-                <div
-                  class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                ></div>
-              </div>
-              <div class="flex">
-                <div
-                  class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                ></div>
-                <div
-                  class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- THIS ONE -->
-        <div class="flex justify-between relative">
-          <div class="bottom-left-add absolute" style="left: 0; bottom: 20px">
-            <div
-              class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
-            >
-              <span
-                class="absolute text-[10px]"
-                style="
-                  writing-mode: vertical-rl;
-                  text-orientation: mixed;
-                  margin-left: -8px;
-                  margin-top: -38px;
-                "
-                >HOME</span
-              ><span
-                class="absolute text-[10px]"
-                style="
-                  bottom: 0;
-                  right: 0;
-                  margin-bottom: -8px;
-                  margin-right: -28px;
-                "
-                >WAN</span
-              >
-            </div>
-            <div
-              class="absolute bg-white w-[15px] h-[15px]"
-              style="left: 0"
-            ></div>
-          </div>
-          <div class="absolute" style="right: 30px; bottom: 30px">✕✕✕</div>
-        </div>
-      </section>
-
-      <!-- PROFILE SECTION -->
-      <section class="profile h-fit md:h-screen" id="profile">
-        <div class="h-full w-full flex items-center pb-[50px] md:pb-0">
-          <div
-            class="flex w-full flex-col md:flex-row justify-evenly transition-all duration-200"
-          >
-            <h2 class="font-bold text-[75px] mb-5 md:hidden block">Profile</h2>
-            <div
-              class="bg-gray-400 min-h-[500px] max-h-[600px] w-full flex items-end bg-cover bg-center lg:w-[350px] md:w-[300px] h-[350px] relative"
-            >
-              <img
-                src="img/akwan.jpg"
-                alt="Gambar akwan cakra"
-                class="h-full w-full object-cover"
-              />
-              <div class="dots absolute top-[10px] left-[-10px]">
-                <div class="flex">
-                  <div
-                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
-                  ></div>
-                  <div
-                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
-                  ></div>
-                  <div
-                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
-                  ></div>
-                </div>
-                <div class="flex">
-                  <div
-                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
-                  ></div>
-                  <div
-                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
-                  ></div>
-                </div>
-                <div
-                  class="item bg-white w-[10px] h-[10px] m-px rounded-full"
-                ></div>
-              </div>
-
-              <div
-                class="bg-white w-full text-black p-2 transition-all duration-200 ease-in-out overflow-hidden md:h-[70px] hover:h-64 absolute"
-              >
-                <div>
-                  <p class="font-bold text-xl mb-0">
-                    Akwan Cakra Tajimalela • 19
-                  </p>
-                  <p>Student & Web Developer</p>
-                </div>
-                <div class="my-3">
-                  <p>I'm interested in programming, design and gaming.</p>
-                  <!-- <p>Have 2 months 1 year work experience</p>
-                                  <p>Have created more than 6 projects</p> -->
-                </div>
-                <div class="mb-2">
-                  <p>These are my social media:</p>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/akwan-cakra-tajimalela-a94590171/"
-                    class="hover:text-gray-600 transition duration-150 ease-in-out"
-                    ><i class="bx bxl-linkedin-square text-[34px]"></i
-                  ></a>
-                  <a
-                    target="_blank"
-                    href="https://github.com/akwancakra"
-                    class="hover:text-gray-600 transition duration-150 ease-in-out"
-                    ><i class="bx bxl-github text-[34px]"></i
-                  ></a>
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/Akwancakra666/"
-                    class="hover:text-gray-600 transition duration-150 ease-in-out"
-                    ><i class="bx bxl-facebook-square text-[34px]"></i
-                  ></a>
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/akwancakra/"
-                    class="hover:text-gray-600 transition duration-150 ease-in-out"
-                    ><i class="bx bxl-instagram-alt text-[34px]"></i
-                  ></a>
-                  <a
-                    target="_blank"
-                    href="https://twitter.com/AkwanCakra"
-                    class="hover:text-gray-600 transition duration-150 ease-in-out"
-                    ><i class="bx bxl-twitter text-[34px]"></i
-                  ></a>
-                  <a
-                    target="_blank"
-                    href="https://discord.io/babachi"
-                    class="hover:text-gray-600 transition duration-150 ease-in-out"
-                    ><i class="bx bxl-discord-alt text-[34px]"></i
-                  ></a>
-                </div>
-                <a
-                  target="_blank"
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=akwancakra20@gmail.com"
-                  class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 mr-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  Send me an E-mail</a
-                >
-              </div>
-            </div>
-
-            <div class="w-full mt-3 relative md:w-fit">
-              <h2 class="font-bold text-[75px] mb-5 md:block hidden">
-                Profile
-              </h2>
-              <span
-                class="absolute text-[14px] opacity-60 left-[90px] top-[90px]"
-                >✕✕✕</span
-              >
-              <div class="mx-auto w-[90%] md md:w-[80vw] md:max-w-[450px]">
-                <p class="font-bold text-[30px]">Skills</p>
-                <div
-                  class="swiper-container profile-swiper h-[250px] overflow-hidden"
-                >
-                  <div class="swiper-wrapper">
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">HTML</p>
-                        <p>12 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">CSS</p>
-                        <p>12 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">
-                          Javascript
-                        </p>
-                        <p>8 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">Php</p>
-                        <p>4 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">
-                          Laravel
-                        </p>
-                        <p>3 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">
-                          Codeigniter
-                        </p>
-                        <p>2 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">
-                          React
-                        </p>
-                        <p>3 Projects</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">
-                          MySQL
-                        </p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                    <div
-                      class="swiper-slide justify-around bg-white text-black overflow-hidden"
-                    >
-                      <div>
-                        <p class="text-[35px] font-bold p-2 mb-[-18px]">Git</p>
-                      </div>
-                      <i class="bx bxs-chevron-right-square text-[38px]"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex justify-between relative">
-          <div class="bottom-left-add absolute left-0 bottom-[20px]">
-            <div
-              class="border-l-2 border-b-2 border-white w-[90px] h-[50px] ml-[6px] mb-[-8px]"
-            ></div>
-          </div>
-          <div class="bottom-right-add absolute right-0 bottom-[20px]">
-            <div
-              class="relative border-b-2 border-white border-r-2 w-[120px] h-[70px] mr-[6px]"
-            >
-              <span
-                class="absolute text-[10px] right-0 bottom-0 left-[-45px] bottom-[-8px]"
-                >PROFILE</span
-              >
-            </div>
-            <div
-              class="absolute bg-white h-[15px] w-[15px] mt-[-6px] right-0"
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section class="education h-screen" id="education">
-        <div class="flex justify-end relative">
-          <div class="top-right-add absolute right-0 top-0">
-            <div class="absolute bg-white h-[15px] w-[15px] right-0">
-              <div></div>
-            </div>
-            <div
-              class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
-            >
-              <span class="absolute text-[10px] mt-[-8px] ml-[-18px]">20</span>
-            </div>
-            <div></div>
-          </div>
-        </div>
-
-        <div class="h-full relative">
-          <h2 class="font-bold text-[75px] relative">
-            <span class="absolute text-[14px] opacity-60 left-[95px] top-[25px]"
-              >✕✕✕</span
-            >Educations
-          </h2>
-          <div class="edu-swiper swiper w-full h-fit z-0">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide edu-item w-fit">
-                <!-- <div> -->
-                <div class="img bg-cover bg-center w-[300px] h-[350px]">
-                  <img
-                    src="img/school_2.png"
-                    alt="Sekolah SD akwan cakra"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="texts bg-white text-black p-2">
-                  <div class="flex justify-between">
-                    <p class="font-bold w-[200px] text-start">
-                      SDN Jatirahayu 1
-                    </p>
-                    <p class="font-bold">Negeri</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p>Passed</p>
-                    <p>2011-2017</p>
-                  </div>
-                </div>
-                <!-- </div> -->
-              </div>
-              <div class="swiper-slide edu-item w-fit">
-                <!-- <div> -->
-                <div class="img bg-cover bg-center w-[300px] h-[350px]">
-                  <img
-                    src="img/school_1.png"
-                    alt="Sekolah SMP akwan cakra"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="texts bg-white text-black p-2">
-                  <div class="flex justify-between">
-                    <p class="font-bold w-[200px] text-start">
-                      SMPN 20 Kota Bekasi
-                    </p>
-                    <p class="font-bold">Negeri</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p>Passed</p>
-                    <p>2017-2019</p>
-                  </div>
-                </div>
-                <!-- </div> -->
-              </div>
-              <div class="swiper-slide edu-item w-fit">
-                <!-- <div> -->
-                <div class="img bg-cover bg-center w-[300px] h-[350px]">
-                  <img
-                    src="img/school_3.png"
-                    alt="Sekolah SMK akwan cakra"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="texts bg-white text-black p-2">
-                  <div class="flex justify-between">
-                    <p class="font-bold w-[200px] text-start">
-                      SMKN 1 Kota Bekasi
-                    </p>
-                    <p class="font-bold">Negeri</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p>Passed</p>
-                    <p>2019-2022</p>
-                  </div>
-                </div>
-                <!-- </div> -->
-              </div>
-              <div class="swiper-slide edu-item w-fit">
-                <!-- <div> -->
-                <div class="img bg-cover bg-center w-[300px] h-[350px]">
-                  <img
-                    src="img/school_4.jpg"
-                    alt="Universitas akwan cakra"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="texts bg-white text-black p-2">
-                  <div class="flex justify-between">
-                    <p class="font-bold w-[200px] text-start">
-                      Universitas Pendidikan Indonesia
-                    </p>
-                    <p class="font-bold">Negeri</p>
-                  </div>
-                  <div class="flex justify-between">
-                    <p>On Going</p>
-                    <p>2022 - ~</p>
-                  </div>
-                </div>
-                <!-- </div> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="dots absolute rotate-180 right-[30px] bottom-[50px]">
-            <div class="flex">
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-            </div>
-            <div class="flex">
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-            </div>
-            <div
-              class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-            ></div>
-          </div>
-        </div>
-
-        <div class="flex justify-start relative">
-          <div class="bottom-left-add absolute left-0 bottom-[20px]">
-            <div
-              class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
-            >
-              <span
-                class="absolute text-[10px] ml-[-8px] mt-[-60px]"
-                style="writing-mode: vertical-rl; text-orientation: mixed"
-                >EDUCATION</span
-              ><span
-                class="absolute text-[10px] right-0 bottom-0 mb-[-8px] mr-[-28px]"
-                >WAN</span
-              >
-            </div>
-            <div class="absolute bg-white w-[15px] h-[15px] left-0"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WORK -->
-      <section class="work h-[80vh]" id="work">
-        <div class="flex justify-end relative">
-          <div class="top-right-add absolute right-0 top-0">
-            <div class="absolute bg-white h-[15px] w-[15px] right-0">
-              <div></div>
-            </div>
-            <div
-              class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
-            >
-              <span class="absolute text-[10px] mt-[-8px] ml-[-18px]">20</span>
-            </div>
-            <div></div>
-          </div>
-        </div>
-
-        <div class="h-full relative">
-          <h2 class="font-bold text-[75px] relative">
-            <span class="absolute text-[14px] opacity-60 left-72 top-[25px]"
-              >✕✕✕</span
-            >Works
-          </h2>
-          <div class="work-swiper swiper w-full h-fit z-0">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide group workitem w-fit">
-                I'm currently not working.
-              </div>
-            </div>
-          </div>
-
-          <div class="dots absolute rotate-180 bottom-[50px] right-[30px]">
-            <div class="flex">
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-            </div>
-            <div class="flex">
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-              <div
-                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-              ></div>
-            </div>
-            <div
-              class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-            ></div>
-          </div>
-        </div>
-
-        <div class="flex justify-start relative">
-          <div class="bottom-left-add absolute left-0 bottom-[20px]">
-            <div
-              class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
-            >
-              <span
-                class="absolute text-[10px] ml-[-8px] mt-[-45px]"
-                style="writing-mode: vertical-rl; text-orientation: mixed"
-                >WORKS</span
-              ><span
-                class="absolute text-[10px] bottom-0 right-0 mb-[-8px] mr-[-28px]"
-                >WAN</span
-              >
-            </div>
-            <div class="absolute bg-white w-[15px] h-[15px] left-0"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section class="project" id="project">
-        <div class="flex justify-end relative">
-          <div class="top-right-add absolute right-0 top-0">
-            <div class="absolute bg-white h-[15px] w-[15px] right-0">
-              <div></div>
-            </div>
-            <div
-              class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
-            >
-              <span class="absolute text-[10px] mt-[-8px] ml-[-52px]"
-                >PROJECTS</span
-              >
-            </div>
-            <div></div>
-          </div>
-        </div>
-
-        <div class="h-full relative">
-          <h2 class="font-bold text-[75px] relative">
-            <span
-              class="absolute text-[14px] opacity-60 left-[79px] bottom-[10px]"
-              >✕✕✕</span
-            >Projects
-          </h2>
-
-          <div class="mx-auto max-w-7xl">
-            <div
-              class="pl-[30px] pr-[40px] grid grid-cols-2 gap-3 max-sm:gap-0 max-sm:grid-cols-1 max-sm:p-0 max-sm:pr-[20px]"
-            >
-              <div
-                class="group relative m-2 bg-gray-400 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px]"
-              >
-                <img
-                  src="img/mockup-4.png"
-                  alt="Gambar project"
-                  class="h-full w-full object-cover"
-                />
-                <div
-                  class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
-                ></div>
-                <div class="absolute top-0 m-2">
-                  <div
-                    class="w-[50px] h-[50px] bg-white grid place-content-center"
-                  >
-                    <i class="bx bx-pin text-[35px] rotate-45"></i>
-                  </div>
-                </div>
-                <h1
-                  class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
-                >
-                  BKK SMKN 1 Kota Bekasi
-                </h1>
-                <div
-                  class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
-                >
-                  <div class="p-2">
-                    <h1 class="font-bold text-[24px]">
-                      BKK SMKN 1 Kota Bekasi
-                    </h1>
-                    <p class="mb-3">
-                      BKK 1 is an application made for a final school project.
-                      It is made with Laravel as the main framework and PHP as
-                      the primary programming language for the back end and
-                      using bootstrap as the framework with CSS for making it
-                      perfect for the front end.
-                    </p>
-                    <h3 class="font-bold">Created With:</h3>
-                    <div class="mb-3 w-fit h-fit grid grid-cols-5 gap-2">
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_html.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-cover"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_css.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-cover"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_javascript.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-cover"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_php.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-cover"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_laravel.jpg"
-                            alt="Gambar icon"
-                            class="h-full w-full object-cover"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="absolute bottom-0 w-full p-2">
-                    <a
-                      target="_blank"
-                      href="https://github.com/akwancakra/bkksatu"
-                      class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                      >See Details</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="group relative m-2 bg-gray-400 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px]"
-              >
-                <img
-                  src="img/mockup-1.png"
-                  alt="Gambar project"
-                  class="h-full w-full object-cover"
-                />
-                <div
-                  class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
-                ></div>
-                <div class="absolute top-0 m-2">
-                  <div
-                    class="w-[50px] h-[50px] bg-white grid place-content-center"
-                  >
-                    <i class="bx bx-pin text-[35px] rotate-45"></i>
-                  </div>
-                </div>
-                <h1
-                  class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
-                >
-                  Futsin
-                </h1>
-                <div
-                  class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
-                >
-                  <div class="p-2">
-                    <h1 class="font-bold text-[24px]">Futsin</h1>
-                    <p class="mb-3">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Quam voluptatibus dignissimos quia, ipsa quod odit
-                      inventore aliquam expedita rerum voluptatem.
-                    </p>
-                    <h3 class="font-bold">Created With:</h3>
-                    <div class="mb-3 w-fit h-fit grid grid-cols-4 gap-2">
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_cpp.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="absolute bottom-0 w-full p-2">
-                    <a
-                      target="_blank"
-                      href="https://github.com/akwancakra/reservasi-futsal"
-                      class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                      >See Details</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="grid grid-cols-4 max-sm:grid-cols-1 max-sm:pr-[20px]">
-              <div
-                class="group relative m-2 bg-gray-400 col-start-2 col-span-2 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px] max-sm:col-span-1"
-              >
-                <img
-                  src="img/mockup-3.png"
-                  alt="Gambar project"
-                  class="h-full w-full object-cover"
-                />
-                <div
-                  class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
-                ></div>
-                <div class="absolute top-0 m-2">
-                  <div
-                    class="w-[50px] h-[50px] bg-white grid place-content-center"
-                  >
-                    <i class="bx bx-pin text-[35px] rotate-45"></i>
-                  </div>
-                </div>
-                <h1
-                  class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
-                >
-                  Aplis
-                </h1>
-                <div
-                  class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
-                >
-                  <div class="p-2">
-                    <h1 class="font-bold text-[24px]">Aplis</h1>
-                    <p class="mb-3">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Quam voluptatibus dignissimos quia, ipsa quod odit
-                      inventore aliquam expedita rerum voluptatem.
-                    </p>
-                    <h3 class="font-bold">Created With:</h3>
-                    <div class="mb-3 w-fit h-fit grid grid-cols-5 gap-2">
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_html.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_css.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_react.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_typescript.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                      <div class="p-1">
-                        <div class="w-[35px] h-[35px]">
-                          <img
-                            src="img/PIC_node.png"
-                            alt="Gambar icon"
-                            class="h-full w-full object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="absolute bottom-0 w-full p-2">
-                    <a
-                      target="_blank"
-                      href="https://github.com/akwancakra/secs-frontend-final"
-                      class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                      >See Details</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FORM -->
-      <section class="contact h-screen mt-5 bg-gray-800" id="contact">
-        <div class="flex justify-end relative">
-          <div class="top-right-add absolute right-0 top-0">
-            <div class="absolute bg-white h-[15px] w-[15px] right-0">
-              <div></div>
-            </div>
-            <div
-              class="border-t-2 border-r-2 h-[90px] border-white w-[70px] mr-[6px] mt-[6px]"
-            >
-              <span class="absolute text-[10px] mt-[-8px] ml-[-52px]"
-                >CONTACT</span
-              >
-            </div>
-            <div></div>
-          </div>
-        </div>
-
-        <div class="grid place-items-center h-screen">
-          <div>
-            <div class="h-full w-full">
-              <h2 class="md:text-center font-bold text-[70px]">Contact Me</h2>
-
-              <div class="flex justify-center">
-                <form action="" class="w-full md:w-[500px]">
-                  <div class="relative mb-5">
-                    <input
-                      type="text"
-                      id="floating_outlined"
-                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
-                      placeholder=" "
-                    />
-                    <label
-                      for="floating_outlined"
-                      class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
-                      >Name</label
-                    >
-                  </div>
-                  <div class="relative mb-5">
-                    <input
-                      type="email"
-                      id="floating_outlined"
-                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
-                      placeholder=" "
-                    />
-                    <label
-                      for="floating_outlined"
-                      class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
-                      >E-mail</label
-                    >
-                  </div>
-                  <div class="relative mb-5">
-                    <textarea
-                      name="message"
-                      id="message"
-                      rows="10"
-                      class="w-full block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
-                    ></textarea>
-                    <label
-                      for="floating_outlined "
-                      class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
-                      >Message</label
-                    >
-                  </div>
-                  <div>
+                <div class="mr-3 flex flex-col">
                     <button
-                      type="submit"
-                      class="w-full flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-bold hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
-              </div>
-
-              <div class="dots absolute bottom-[250px] left-[45px]">
-                <div class="flex">
-                  <div
-                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                  ></div>
-                  <div
-                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                  ></div>
+                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        id="homeNav"
+                    ></button>
+                    <button
+                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        id="profileNav"
+                    ></button>
+                    <button
+                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        id="educationNav"
+                    ></button>
+                    <button
+                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        id="workNav"
+                    ></button>
+                    <button
+                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        id="projectNav"
+                    ></button>
+                    <button
+                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        id="contactNav"
+                    ></button>
                 </div>
-                <div class="flex">
-                  <div
-                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                  ></div>
-                  <div
-                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                  ></div>
-                </div>
-              </div>
-
-              <span class="absolute text-[14px] right-[95px] bottom-[45px]"
-                >✕✕✕</span
-              >
             </div>
-          </div>
+
+            <!-- HOME SECTION -->
+            <section class="home h-screen" id="home">
+                <div class="flex justify-between relative">
+                    <div class="top-left-add absolute">
+                        <div class="border border-white w-[70px]"></div>
+                        <div class="border-l-2 border-white h-[30px]"></div>
+                    </div>
+                    <div class="top-right-add absolute right-0 top-0">
+                        <div class="absolute right-0">
+                            <div class="bg-white h-[15px] w-[15px]"></div>
+                        </div>
+                        <div
+                            class="border-t border-r-2 border-white mr-[6px] mt-[6px] w-[120px] h-[50px]"
+                        >
+                            <span
+                                class="absolute text-[10px] mt-[-8px] ml-[-18px]"
+                                >20</span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center h-full">
+                    <div class="texts relative">
+                        <div
+                            class="dots absolute"
+                            style="top: -30px; left: -30px"
+                        >
+                            <div class="flex">
+                                <div
+                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                ></div>
+                            </div>
+                            <div class="flex">
+                                <div
+                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                ></div>
+                            </div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                        </div>
+                        <h1
+                            class="text-5xl font-bold border-b border-white-700 w-fit"
+                        >
+                            Akwan Cakra Tajimalela
+                        </h1>
+                        <p>
+                            I'm a Software Engineering student at Indonesia
+                            University of Education.
+                        </p>
+                    </div>
+                    <div class="absolute md:relative img-wrapper">
+                        <div
+                            class="img bg-gray-400 bg-cover bg-center w-[300px] h-[350px]"
+                        >
+                            <img
+                                src="img/akwan.jpg"
+                                alt="Gambar akwan cakra"
+                                class="h-full w-full object-cover"
+                            />
+                        </div>
+                        <div
+                            class="dots absolute"
+                            style="bottom: -15px; right: -15px"
+                        >
+                            <div class="flex">
+                                <div
+                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                ></div>
+                            </div>
+                            <div class="flex">
+                                <div
+                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THIS ONE -->
+                <div class="flex justify-between relative">
+                    <div
+                        class="bottom-left-add absolute"
+                        style="left: 0; bottom: 20px"
+                    >
+                        <div
+                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
+                        >
+                            <span
+                                class="absolute text-[10px]"
+                                style="
+                                    writing-mode: vertical-rl;
+                                    text-orientation: mixed;
+                                    margin-left: -8px;
+                                    margin-top: -38px;
+                                "
+                                >HOME</span
+                            ><span
+                                class="absolute text-[10px]"
+                                style="
+                                    bottom: 0;
+                                    right: 0;
+                                    margin-bottom: -8px;
+                                    margin-right: -28px;
+                                "
+                                >WAN</span
+                            >
+                        </div>
+                        <div
+                            class="absolute bg-white w-[15px] h-[15px]"
+                            style="left: 0"
+                        ></div>
+                    </div>
+                    <div class="absolute" style="right: 30px; bottom: 30px">
+                        ✕✕✕
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFILE SECTION -->
+            <section class="profile h-fit md:h-screen" id="profile">
+                <div class="h-full w-full flex items-center pb-[50px] md:pb-0">
+                    <div
+                        class="flex w-full flex-col md:flex-row justify-evenly transition-all duration-200"
+                    >
+                        <h2 class="font-bold text-[75px] mb-5 md:hidden block">
+                            Profile
+                        </h2>
+                        <div
+                            class="bg-gray-400 min-h-[500px] max-h-[600px] w-full flex items-end bg-cover bg-center lg:w-[350px] md:w-[300px] h-[350px] relative"
+                        >
+                            <img
+                                src="img/akwan.jpg"
+                                alt="Gambar akwan cakra"
+                                class="h-full w-full object-cover"
+                            />
+                            <div class="dots absolute top-[10px] left-[-10px]">
+                                <div class="flex">
+                                    <div
+                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                    ></div>
+                                    <div
+                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                    ></div>
+                                    <div
+                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                    ></div>
+                                </div>
+                                <div class="flex">
+                                    <div
+                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                    ></div>
+                                    <div
+                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                ></div>
+                            </div>
+
+                            <div
+                                class="bg-white w-full text-black p-2 transition-all duration-200 ease-in-out overflow-hidden md:h-[70px] hover:h-64 absolute"
+                            >
+                                <div>
+                                    <p class="font-bold text-xl mb-0">
+                                        Akwan Cakra Tajimalela • 19
+                                    </p>
+                                    <p>Student & Web Developer</p>
+                                </div>
+                                <div class="my-3">
+                                    <p>
+                                        I'm interested in programming, design
+                                        and gaming.
+                                    </p>
+                                    <!-- <p>Have 2 months 1 year work experience</p>
+                                  <p>Have created more than 6 projects</p> -->
+                                </div>
+                                <div class="mb-2">
+                                    <p>These are my social media:</p>
+                                    <a
+                                        target="_blank"
+                                        href="https://www.linkedin.com/in/akwan-cakra-tajimalela-a94590171/"
+                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                        ><i
+                                            class="bx bxl-linkedin-square text-[34px]"
+                                        ></i
+                                    ></a>
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/akwancakra"
+                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                        ><i
+                                            class="bx bxl-github text-[34px]"
+                                        ></i
+                                    ></a>
+                                    <a
+                                        target="_blank"
+                                        href="https://www.facebook.com/Akwancakra666/"
+                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                        ><i
+                                            class="bx bxl-facebook-square text-[34px]"
+                                        ></i
+                                    ></a>
+                                    <a
+                                        target="_blank"
+                                        href="https://www.instagram.com/akwancakra/"
+                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                        ><i
+                                            class="bx bxl-instagram-alt text-[34px]"
+                                        ></i
+                                    ></a>
+                                    <a
+                                        target="_blank"
+                                        href="https://twitter.com/AkwanCakra"
+                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                        ><i
+                                            class="bx bxl-twitter text-[34px]"
+                                        ></i
+                                    ></a>
+                                    <a
+                                        target="_blank"
+                                        href="https://discord.io/babachi"
+                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                        ><i
+                                            class="bx bxl-discord-alt text-[34px]"
+                                        ></i
+                                    ></a>
+                                </div>
+                                <a
+                                    target="_blank"
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=akwancakra20@gmail.com"
+                                    class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-1"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        />
+                                    </svg>
+                                    Send me an E-mail</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="w-full mt-3 relative md:w-fit">
+                            <h2
+                                class="font-bold text-[75px] mb-5 md:block hidden"
+                            >
+                                Profile
+                            </h2>
+                            <span
+                                class="absolute text-[14px] opacity-60 left-[90px] top-[90px]"
+                                >✕✕✕</span
+                            >
+                            <div
+                                class="mx-auto w-[90%] md md:w-[80vw] md:max-w-[450px]"
+                            >
+                                <p class="font-bold text-[30px]">Skills</p>
+                                <div
+                                    class="swiper-container profile-swiper h-[250px] overflow-hidden"
+                                >
+                                    <div class="swiper-wrapper">
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    HTML
+                                                </p>
+                                                <p>12 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    CSS
+                                                </p>
+                                                <p>12 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    Javascript
+                                                </p>
+                                                <p>8 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    Php
+                                                </p>
+                                                <p>4 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    Laravel
+                                                </p>
+                                                <p>3 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    Codeigniter
+                                                </p>
+                                                <p>2 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    React
+                                                </p>
+                                                <p>3 Projects</p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    MySQL
+                                                </p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                        <div
+                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                        >
+                                            <div>
+                                                <p
+                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
+                                                >
+                                                    Git
+                                                </p>
+                                            </div>
+                                            <i
+                                                class="bx bxs-chevron-right-square text-[38px]"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between relative">
+                    <div class="bottom-left-add absolute left-0 bottom-[20px]">
+                        <div
+                            class="border-l-2 border-b-2 border-white w-[90px] h-[50px] ml-[6px] mb-[-8px]"
+                        ></div>
+                    </div>
+                    <div
+                        class="bottom-right-add absolute right-0 bottom-[20px]"
+                    >
+                        <div
+                            class="relative border-b-2 border-white border-r-2 w-[120px] h-[70px] mr-[6px]"
+                        >
+                            <span
+                                class="absolute text-[10px] right-0 bottom-0 left-[-45px] bottom-[-8px]"
+                                >PROFILE</span
+                            >
+                        </div>
+                        <div
+                            class="absolute bg-white h-[15px] w-[15px] mt-[-6px] right-0"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EDUCATION -->
+            <section class="education h-screen" id="education">
+                <div class="flex justify-end relative">
+                    <div class="top-right-add absolute right-0 top-0">
+                        <div
+                            class="absolute bg-white h-[15px] w-[15px] right-0"
+                        >
+                            <div></div>
+                        </div>
+                        <div
+                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
+                        >
+                            <span
+                                class="absolute text-[10px] mt-[-8px] ml-[-18px]"
+                                >20</span
+                            >
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="h-full relative">
+                    <h2 class="font-bold text-[75px] relative">
+                        <span
+                            class="absolute text-[14px] opacity-60 left-[95px] top-[25px]"
+                            >✕✕✕</span
+                        >Educations
+                    </h2>
+                    <div class="edu-swiper swiper w-full h-fit z-0">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide edu-item w-fit">
+                                <!-- <div> -->
+                                <div
+                                    class="img bg-cover bg-center w-[300px] h-[350px]"
+                                >
+                                    <img
+                                        src="img/school_2.png"
+                                        alt="Sekolah SD akwan cakra"
+                                        class="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div class="texts bg-white text-black p-2">
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="font-bold w-[200px] text-start"
+                                        >
+                                            SDN Jatirahayu 1
+                                        </p>
+                                        <p class="font-bold">Negeri</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p>Passed</p>
+                                        <p>2011-2017</p>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="swiper-slide edu-item w-fit">
+                                <!-- <div> -->
+                                <div
+                                    class="img bg-cover bg-center w-[300px] h-[350px]"
+                                >
+                                    <img
+                                        src="img/school_1.png"
+                                        alt="Sekolah SMP akwan cakra"
+                                        class="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div class="texts bg-white text-black p-2">
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="font-bold w-[200px] text-start"
+                                        >
+                                            SMPN 20 Kota Bekasi
+                                        </p>
+                                        <p class="font-bold">Negeri</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p>Passed</p>
+                                        <p>2017-2019</p>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="swiper-slide edu-item w-fit">
+                                <!-- <div> -->
+                                <div
+                                    class="img bg-cover bg-center w-[300px] h-[350px]"
+                                >
+                                    <img
+                                        src="img/school_3.png"
+                                        alt="Sekolah SMK akwan cakra"
+                                        class="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div class="texts bg-white text-black p-2">
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="font-bold w-[200px] text-start"
+                                        >
+                                            SMKN 1 Kota Bekasi
+                                        </p>
+                                        <p class="font-bold">Negeri</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p>Passed</p>
+                                        <p>2019-2022</p>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="swiper-slide edu-item w-fit">
+                                <!-- <div> -->
+                                <div
+                                    class="img bg-cover bg-center w-[300px] h-[350px]"
+                                >
+                                    <img
+                                        src="img/school_4.jpg"
+                                        alt="Universitas akwan cakra"
+                                        class="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div class="texts bg-white text-black p-2">
+                                    <div class="flex justify-between">
+                                        <p
+                                            class="font-bold w-[200px] text-start"
+                                        >
+                                            Universitas Pendidikan Indonesia
+                                        </p>
+                                        <p class="font-bold">Negeri</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p>On Going</p>
+                                        <p>2022 - ~</p>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="dots absolute rotate-180 right-[30px] bottom-[50px]"
+                    >
+                        <div class="flex">
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                        </div>
+                        <div
+                            class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                        ></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-start relative">
+                    <div class="bottom-left-add absolute left-0 bottom-[20px]">
+                        <div
+                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
+                        >
+                            <span
+                                class="absolute text-[10px] ml-[-8px] mt-[-60px]"
+                                style="
+                                    writing-mode: vertical-rl;
+                                    text-orientation: mixed;
+                                "
+                                >EDUCATION</span
+                            ><span
+                                class="absolute text-[10px] right-0 bottom-0 mb-[-8px] mr-[-28px]"
+                                >WAN</span
+                            >
+                        </div>
+                        <div
+                            class="absolute bg-white w-[15px] h-[15px] left-0"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WORK -->
+            <section class="work h-[80vh]" id="work">
+                <div class="flex justify-end relative">
+                    <div class="top-right-add absolute right-0 top-0">
+                        <div
+                            class="absolute bg-white h-[15px] w-[15px] right-0"
+                        >
+                            <div></div>
+                        </div>
+                        <div
+                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
+                        >
+                            <span
+                                class="absolute text-[10px] mt-[-8px] ml-[-18px]"
+                                >20</span
+                            >
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="h-full relative">
+                    <h2 class="font-bold text-[75px] relative">
+                        <span
+                            class="absolute text-[14px] opacity-60 left-72 top-[25px]"
+                            >✕✕✕</span
+                        >Works
+                    </h2>
+                    <div class="work-swiper swiper w-full h-fit z-0">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide group workitem w-fit">
+                                I'm currently not working.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="dots absolute rotate-180 bottom-[50px] right-[30px]"
+                    >
+                        <div class="flex">
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                            <div
+                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            ></div>
+                        </div>
+                        <div
+                            class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                        ></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-start relative">
+                    <div class="bottom-left-add absolute left-0 bottom-[20px]">
+                        <div
+                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
+                        >
+                            <span
+                                class="absolute text-[10px] ml-[-8px] mt-[-45px]"
+                                style="
+                                    writing-mode: vertical-rl;
+                                    text-orientation: mixed;
+                                "
+                                >WORKS</span
+                            ><span
+                                class="absolute text-[10px] bottom-0 right-0 mb-[-8px] mr-[-28px]"
+                                >WAN</span
+                            >
+                        </div>
+                        <div
+                            class="absolute bg-white w-[15px] h-[15px] left-0"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="project" id="project">
+                <div class="flex justify-end relative">
+                    <div class="top-right-add absolute right-0 top-0">
+                        <div
+                            class="absolute bg-white h-[15px] w-[15px] right-0"
+                        >
+                            <div></div>
+                        </div>
+                        <div
+                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
+                        >
+                            <span
+                                class="absolute text-[10px] mt-[-8px] ml-[-52px]"
+                                >PROJECTS</span
+                            >
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="h-full relative">
+                    <h2 class="font-bold text-[75px] relative">
+                        <span
+                            class="absolute text-[14px] opacity-60 left-[79px] bottom-[10px]"
+                            >✕✕✕</span
+                        >Projects
+                    </h2>
+
+                    <div class="mx-auto max-w-7xl">
+                        <div
+                            class="pl-[30px] pr-[40px] grid grid-cols-2 gap-3 max-sm:gap-0 max-sm:grid-cols-1 max-sm:p-0 max-sm:pr-[20px]"
+                        >
+                            <div
+                                class="group relative m-2 bg-gray-400 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px]"
+                            >
+                                <img
+                                    src="img/mockup-4.png"
+                                    alt="Gambar project"
+                                    class="h-full w-full object-cover"
+                                />
+                                <div
+                                    class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
+                                ></div>
+                                <div class="absolute top-0 m-2">
+                                    <div
+                                        class="w-[50px] h-[50px] bg-white grid place-content-center"
+                                    >
+                                        <i
+                                            class="bx bx-pin text-[35px] rotate-45"
+                                        ></i>
+                                    </div>
+                                </div>
+                                <h1
+                                    class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
+                                >
+                                    BKK SMKN 1 Kota Bekasi
+                                </h1>
+                                <div
+                                    class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
+                                >
+                                    <div class="p-2">
+                                        <h1 class="font-bold text-[24px]">
+                                            BKK SMKN 1 Kota Bekasi
+                                        </h1>
+                                        <p class="mb-3">
+                                            BKK 1 is an application made for a
+                                            final school project. It is made
+                                            with Laravel as the main framework
+                                            and PHP as the primary programming
+                                            language for the back end and using
+                                            bootstrap as the framework with CSS
+                                            for making it perfect for the front
+                                            end.
+                                        </p>
+                                        <h3 class="font-bold">Created With:</h3>
+                                        <div
+                                            class="mb-3 w-fit h-fit grid grid-cols-5 gap-2"
+                                        >
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_html.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-cover"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_css.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-cover"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_javascript.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-cover"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_php.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-cover"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_laravel.jpg"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-cover"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 w-full p-2">
+                                        <a
+                                            target="_blank"
+                                            href="https://github.com/akwancakra/bkksatu"
+                                            class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                            >See Details</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative m-2 bg-gray-400 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px]"
+                            >
+                                <img
+                                    src="img/mockup-1.png"
+                                    alt="Gambar project"
+                                    class="h-full w-full object-cover"
+                                />
+                                <div
+                                    class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
+                                ></div>
+                                <div class="absolute top-0 m-2">
+                                    <div
+                                        class="w-[50px] h-[50px] bg-white grid place-content-center"
+                                    >
+                                        <i
+                                            class="bx bx-pin text-[35px] rotate-45"
+                                        ></i>
+                                    </div>
+                                </div>
+                                <h1
+                                    class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
+                                >
+                                    Futsin
+                                </h1>
+                                <div
+                                    class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
+                                >
+                                    <div class="p-2">
+                                        <h1 class="font-bold text-[24px]">
+                                            Futsin
+                                        </h1>
+                                        <p class="mb-3">
+                                            Lorem ipsum dolor sit, amet
+                                            consectetur adipisicing elit. Quam
+                                            voluptatibus dignissimos quia, ipsa
+                                            quod odit inventore aliquam expedita
+                                            rerum voluptatem.
+                                        </p>
+                                        <h3 class="font-bold">Created With:</h3>
+                                        <div
+                                            class="mb-3 w-fit h-fit grid grid-cols-4 gap-2"
+                                        >
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_cpp.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-contain"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 w-full p-2">
+                                        <a
+                                            target="_blank"
+                                            href="https://github.com/akwancakra/reservasi-futsal"
+                                            class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                            >See Details</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-4 max-sm:grid-cols-1 max-sm:pr-[20px]"
+                        >
+                            <div
+                                class="group relative m-2 bg-gray-400 col-start-2 col-span-2 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px] max-sm:col-span-1"
+                            >
+                                <img
+                                    src="img/mockup-3.png"
+                                    alt="Gambar project"
+                                    class="h-full w-full object-cover"
+                                />
+                                <div
+                                    class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
+                                ></div>
+                                <div class="absolute top-0 m-2">
+                                    <div
+                                        class="w-[50px] h-[50px] bg-white grid place-content-center"
+                                    >
+                                        <i
+                                            class="bx bx-pin text-[35px] rotate-45"
+                                        ></i>
+                                    </div>
+                                </div>
+                                <h1
+                                    class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
+                                >
+                                    Aplis
+                                </h1>
+                                <div
+                                    class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
+                                >
+                                    <div class="p-2">
+                                        <h1 class="font-bold text-[24px]">
+                                            Aplis
+                                        </h1>
+                                        <p class="mb-3">
+                                            Lorem ipsum dolor sit, amet
+                                            consectetur adipisicing elit. Quam
+                                            voluptatibus dignissimos quia, ipsa
+                                            quod odit inventore aliquam expedita
+                                            rerum voluptatem.
+                                        </p>
+                                        <h3 class="font-bold">Created With:</h3>
+                                        <div
+                                            class="mb-3 w-fit h-fit grid grid-cols-5 gap-2"
+                                        >
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_html.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-contain"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_css.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-contain"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_react.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-contain"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_typescript.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-contain"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="p-1">
+                                                <div class="w-[35px] h-[35px]">
+                                                    <img
+                                                        src="img/PIC_node.png"
+                                                        alt="Gambar icon"
+                                                        class="h-full w-full object-contain"
+                                                        draggable="false"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 w-full p-2">
+                                        <a
+                                            target="_blank"
+                                            href="https://github.com/akwancakra/secs-frontend-final"
+                                            class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                            >See Details</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORM -->
+            <section class="contact h-screen mt-5 bg-gray-800" id="contact">
+                <div class="flex justify-end relative">
+                    <div class="top-right-add absolute right-0 top-0">
+                        <div
+                            class="absolute bg-white h-[15px] w-[15px] right-0"
+                        >
+                            <div></div>
+                        </div>
+                        <div
+                            class="border-t-2 border-r-2 h-[90px] border-white w-[70px] mr-[6px] mt-[6px]"
+                        >
+                            <span
+                                class="absolute text-[10px] mt-[-8px] ml-[-52px]"
+                                >CONTACT</span
+                            >
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="grid place-items-center h-screen">
+                    <div>
+                        <div class="h-full w-full">
+                            <h2 class="md:text-center font-bold text-[70px]">
+                                Contact Me
+                            </h2>
+
+                            <div class="flex justify-center">
+                                <form
+                                    id="my-form"
+                                    action="https://formspree.io/f/xpzgpadr"
+                                    method="POST"
+                                    class="w-full md:w-[500px]"
+                                >
+                                    <div
+                                        id="feedback-form"
+                                        class="w-full p-3 mb-3 bg-slate-400 hidden items-center gap-1"
+                                    >
+                                        <i
+                                            class="bx bx-info-circle text-gray-900"
+                                        ></i>
+                                        <p
+                                            id="my-form-status"
+                                            class="text-gray-900"
+                                        >
+                                            Terima kasih atas kiriman Anda
+                                        </p>
+                                    </div>
+
+                                    <div class="relative mb-5">
+                                        <input
+                                            id="floating_outlined"
+                                            type="email"
+                                            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
+                                            placeholder=" "
+                                            name="email"
+                                        />
+                                        <label
+                                            for="floating_outlined"
+                                            class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                                            >E-mail</label
+                                        >
+                                    </div>
+                                    <div class="relative mb-5">
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            rows="10"
+                                            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
+                                        ></textarea>
+                                        <label
+                                            for="message"
+                                            class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                                            >Message</label
+                                        >
+                                    </div>
+                                    <div>
+                                        <button
+                                            id="my-form-button"
+                                            type="submit"
+                                            class="w-full flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-bold hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                        >
+                                            Submit
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div
+                                class="dots absolute bottom-[250px] left-[45px]"
+                            >
+                                <div class="flex">
+                                    <div
+                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    ></div>
+                                    <div
+                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    ></div>
+                                </div>
+                                <div class="flex">
+                                    <div
+                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    ></div>
+                                    <div
+                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    ></div>
+                                </div>
+                            </div>
+
+                            <span
+                                class="absolute text-[14px] right-[95px] bottom-[45px]"
+                                >✕✕✕</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
 
-    <!-- SCRIPT -->
-    <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <!-- SWIPER JS -->
-    <script src="js/swiper/swiper-bundle.js"></script>
-    <script src="js/swiper/swiper-bundle.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#homeNav").click(function () {
-          $("html, body").animate({ scrollTop: $("#home").offset().top }, 300);
-        });
-        $("#profileNav").click(function () {
-          $("html, body").animate(
-            { scrollTop: $("#profile").offset().top },
-            300
-          );
-        });
-        $("#educationNav").click(function () {
-          $("html, body").animate(
-            { scrollTop: $("#education").offset().top },
-            300
-          );
-        });
-        $("#workNav").click(function () {
-          $("html, body").animate({ scrollTop: $("#work").offset().top }, 300);
-        });
-        $("#projectNav").click(function () {
-          $("html, body").animate(
-            { scrollTop: $("#project").offset().top },
-            300
-          );
-        });
-        $("#contactNav").click(function () {
-          $("html, body").animate(
-            { scrollTop: $("#contact").offset().top },
-            300
-          );
-        });
+        <!-- SCRIPT -->
+        <!-- JQUERY -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <!-- SWIPER JS -->
+        <script src="js/swiper/swiper-bundle.js"></script>
+        <script src="js/swiper/swiper-bundle.min.js"></script>
+        <!-- EMAIL -->
+        <script>
+            var form = document.getElementById("my-form");
 
-        $(window).scroll(function () {
-          if ($(window).scrollTop() < $("#profile").offset().top) {
-            $("#profileNav").removeClass("h-[85px]");
-            $("#profileNav").addClass("h-[30px]");
+            async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("my-form-status");
+                var feedback = document.getElementById("feedback-form");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            status.innerHTML =
+                                "Terima kasih atas kiriman Anda!";
+                            feedback.classList.remove("hidden");
+                            feedback.classList.add("flex");
+                            form.reset();
+                        } else {
+                            response.json().then((data) => {
+                                if (Object.hasOwn(data, "errors")) {
+                                    status.innerHTML = data["errors"]
+                                        .map((error) => error["message"])
+                                        .join(", ");
+                                    feedback.classList.remove("hidden");
+                                    feedback.classList.add("flex");
+                                } else {
+                                    status.innerHTML =
+                                        "Sepertinya ada kesalahan pada mengirim form anda";
+                                    feedback.classList.remove("hidden");
+                                    feedback.classList.add("flex");
+                                }
+                            });
+                        }
+                    })
+                    .catch((error) => {
+                        status.innerHTML =
+                            "Sepertinya ada kesalahan pada mengirim form anda";
+                        feedback.classList.remove("hidden");
+                        feedback.classList.add("flex");
+                    });
+            }
+            form.addEventListener("submit", handleSubmit);
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#homeNav").click(function () {
+                    $("html, body").animate(
+                        { scrollTop: $("#home").offset().top },
+                        300
+                    );
+                });
+                $("#profileNav").click(function () {
+                    $("html, body").animate(
+                        { scrollTop: $("#profile").offset().top },
+                        300
+                    );
+                });
+                $("#educationNav").click(function () {
+                    $("html, body").animate(
+                        { scrollTop: $("#education").offset().top },
+                        300
+                    );
+                });
+                $("#workNav").click(function () {
+                    $("html, body").animate(
+                        { scrollTop: $("#work").offset().top },
+                        300
+                    );
+                });
+                $("#projectNav").click(function () {
+                    $("html, body").animate(
+                        { scrollTop: $("#project").offset().top },
+                        300
+                    );
+                });
+                $("#contactNav").click(function () {
+                    $("html, body").animate(
+                        { scrollTop: $("#contact").offset().top },
+                        300
+                    );
+                });
 
-            $("#homeNav").removeClass("h-[30px]");
-            $("#homeNav").addClass("h-[85px]");
-          } else if (
-            $(window).scrollTop() < $("#education").offset().top &&
-            $(window).scrollTop() > $("#home").offset().top
-          ) {
-            $("#homeNav").removeClass("h-[85px]");
-            $("#homeNav").addClass("h-[30px]");
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() < $("#profile").offset().top) {
+                        $("#profileNav").removeClass("h-[85px]");
+                        $("#profileNav").addClass("h-[30px]");
 
-            $("#profileNav").removeClass("h-[30px]");
-            $("#profileNav").addClass("h-[85px]");
+                        $("#homeNav").removeClass("h-[30px]");
+                        $("#homeNav").addClass("h-[85px]");
+                    } else if (
+                        $(window).scrollTop() < $("#education").offset().top &&
+                        $(window).scrollTop() > $("#home").offset().top
+                    ) {
+                        $("#homeNav").removeClass("h-[85px]");
+                        $("#homeNav").addClass("h-[30px]");
 
-            $("#educationNav").removeClass("h-[85px]");
-            $("#educationNav").addClass("h-[30px]");
-          } else if (
-            $(window).scrollTop() < $("#work").offset().top &&
-            $(window).scrollTop() > $("#profile").offset().top
-          ) {
-            $("#profileNav").removeClass("h-[85px]");
-            $("#profileNav").addClass("h-[30px]");
+                        $("#profileNav").removeClass("h-[30px]");
+                        $("#profileNav").addClass("h-[85px]");
 
-            $("#educationNav").removeClass("h-[30px]");
-            $("#educationNav").addClass("h-[85px]");
+                        $("#educationNav").removeClass("h-[85px]");
+                        $("#educationNav").addClass("h-[30px]");
+                    } else if (
+                        $(window).scrollTop() < $("#work").offset().top &&
+                        $(window).scrollTop() > $("#profile").offset().top
+                    ) {
+                        $("#profileNav").removeClass("h-[85px]");
+                        $("#profileNav").addClass("h-[30px]");
 
-            $("#workNav").removeClass("h-[85px]");
-            $("#workNav").addClass("h-[30px]");
-          } else if (
-            $(window).scrollTop() < $("#project").offset().top &&
-            $(window).scrollTop() > $("#education").offset().top
-          ) {
-            $("#educationNav").removeClass("h-[85px]");
-            $("#educationNav").addClass("h-[30px]");
+                        $("#educationNav").removeClass("h-[30px]");
+                        $("#educationNav").addClass("h-[85px]");
 
-            $("#workNav").removeClass("h-[30px]");
-            $("#workNav").addClass("h-[85px]");
+                        $("#workNav").removeClass("h-[85px]");
+                        $("#workNav").addClass("h-[30px]");
+                    } else if (
+                        $(window).scrollTop() < $("#project").offset().top &&
+                        $(window).scrollTop() > $("#education").offset().top
+                    ) {
+                        $("#educationNav").removeClass("h-[85px]");
+                        $("#educationNav").addClass("h-[30px]");
 
-            $("#projectNav").removeClass("h-[85px]");
-            $("#projectNav").addClass("h-[30px]");
-          } else if (
-            $(window).scrollTop() < $("#contact").offset().top &&
-            $(window).scrollTop() > $("#work").offset().top
-          ) {
-            $("#workNav").removeClass("h-[85px]");
-            $("#workNav").addClass("h-[30px]");
+                        $("#workNav").removeClass("h-[30px]");
+                        $("#workNav").addClass("h-[85px]");
 
-            $("#projectNav").removeClass("h-[30px]");
-            $("#projectNav").addClass("h-[85px]");
+                        $("#projectNav").removeClass("h-[85px]");
+                        $("#projectNav").addClass("h-[30px]");
+                    } else if (
+                        $(window).scrollTop() < $("#contact").offset().top &&
+                        $(window).scrollTop() > $("#work").offset().top
+                    ) {
+                        $("#workNav").removeClass("h-[85px]");
+                        $("#workNav").addClass("h-[30px]");
 
-            $("#contactNav").removeClass("h-[85px]");
-            $("#contactNav").addClass("h-[30px]");
-          } else {
-            $("#projectNav").removeClass("h-[85px]");
-            $("#projectNav").addClass("h-[30px]");
+                        $("#projectNav").removeClass("h-[30px]");
+                        $("#projectNav").addClass("h-[85px]");
 
-            $("#contactNav").removeClass("h-[30px]");
-            $("#contactNav").addClass("h-[85px]");
-          }
-        });
-      });
+                        $("#contactNav").removeClass("h-[85px]");
+                        $("#contactNav").addClass("h-[30px]");
+                    } else {
+                        $("#projectNav").removeClass("h-[85px]");
+                        $("#projectNav").addClass("h-[30px]");
 
-      let swiper = new Swiper(".profile-swiper", {
-        direction: "vertical",
-        loop: false,
-        grabCursor: true,
-        slidesPerView: 2,
-        centeredSlides: true,
-        effect: "coverflow",
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        autoplay: {
-          delay: 1500,
-          disableOnInteraction: false,
-        },
-      });
+                        $("#contactNav").removeClass("h-[30px]");
+                        $("#contactNav").addClass("h-[85px]");
+                    }
+                });
+            });
 
-      let eduSwiper = new Swiper(".edu-swiper", {
-        grabCursor: true,
-        slidesPerView: "auto",
-        spaceBetween: 30,
-      });
+            let swiper = new Swiper(".profile-swiper", {
+                direction: "vertical",
+                loop: false,
+                grabCursor: true,
+                slidesPerView: 2,
+                centeredSlides: true,
+                effect: "coverflow",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+            });
 
-      let workSwiper = new Swiper(".work-swiper", {
-        grabCursor: true,
-        slidesPerView: "auto",
-        spaceBetween: 30,
-      });
+            let eduSwiper = new Swiper(".edu-swiper", {
+                grabCursor: true,
+                slidesPerView: "auto",
+                spaceBetween: 30,
+            });
 
-      ScrollReveal({
-        reset: true,
-      });
+            let workSwiper = new Swiper(".work-swiper", {
+                grabCursor: true,
+                slidesPerView: "auto",
+                spaceBetween: 30,
+            });
 
-      ScrollReveal().reveal(".home-img", {
-        delay: 500,
-        rotate: {
-          x: 20,
-          z: 20,
-        },
-      });
+            ScrollReveal({
+                reset: true,
+            });
 
-      ScrollReveal().reveal(".text", {
-        delay: 500,
-      });
+            ScrollReveal().reveal(".home-img", {
+                delay: 500,
+                rotate: {
+                    x: 20,
+                    z: 20,
+                },
+            });
 
-      ScrollReveal().reveal(".home", {
-        origin: "bottom",
-        distance: "50px",
-        easing: "cubic-bezier(.37,.01,.74,1)",
-      });
+            ScrollReveal().reveal(".text", {
+                delay: 500,
+            });
 
-      ScrollReveal().reveal(".profile", {
-        origin: "bottom",
-        distance: "50px",
-        easing: "cubic-bezier(.37,.01,.74,1)",
-      });
+            ScrollReveal().reveal(".home", {
+                origin: "bottom",
+                distance: "50px",
+                easing: "cubic-bezier(.37,.01,.74,1)",
+            });
 
-      ScrollReveal().reveal(".education", {
-        origin: "bottom",
-        distance: "50px",
-        easing: "cubic-bezier(.37,.01,.74,1)",
-      });
+            ScrollReveal().reveal(".profile", {
+                origin: "bottom",
+                distance: "50px",
+                easing: "cubic-bezier(.37,.01,.74,1)",
+            });
 
-      ScrollReveal().reveal(".work", {
-        origin: "bottom",
-        distance: "50px",
-        easing: "cubic-bezier(.37,.01,.74,1)",
-      });
+            ScrollReveal().reveal(".education", {
+                origin: "bottom",
+                distance: "50px",
+                easing: "cubic-bezier(.37,.01,.74,1)",
+            });
 
-      ScrollReveal().reveal(".project-item", {
-        interval: 200,
-      });
+            ScrollReveal().reveal(".work", {
+                origin: "bottom",
+                distance: "50px",
+                easing: "cubic-bezier(.37,.01,.74,1)",
+            });
 
-      ScrollReveal().reveal(".project", {
-        origin: "bottom",
-        distance: "50px",
-        easing: "cubic-bezier(.37,.01,.74,1)",
-      });
+            ScrollReveal().reveal(".project-item", {
+                interval: 200,
+            });
 
-      ScrollReveal().reveal(".contact", {
-        origin: "bottom",
-        distance: "50px",
-        easing: "cubic-bezier(.37,.01,.74,1)",
-      });
+            ScrollReveal().reveal(".project", {
+                origin: "bottom",
+                distance: "50px",
+                easing: "cubic-bezier(.37,.01,.74,1)",
+            });
 
-      // $(function () {
-      //   $(".owl-carousel").owlCarousel({
-      //     items: 1,
-      //     loop: false,
-      //     nav: false,
-      //     margin: 0,
-      //   });
-      //   $(".owl-carousel").data("owl.carousel").difference = function (
-      //     first,
-      //     second
-      //   ) {
-      //     return {
-      //       x: first.x - second.x + (first.y - second.y),
-      //       y: first.y - second.y,
-      //     };
-      //   };
-      // });
-    </script>
-  </body>
+            ScrollReveal().reveal(".contact", {
+                origin: "bottom",
+                distance: "50px",
+                easing: "cubic-bezier(.37,.01,.74,1)",
+            });
+
+            // $(function () {
+            //   $(".owl-carousel").owlCarousel({
+            //     items: 1,
+            //     loop: false,
+            //     nav: false,
+            //     margin: 0,
+            //   });
+            //   $(".owl-carousel").data("owl.carousel").difference = function (
+            //     first,
+            //     second
+            //   ) {
+            //     return {
+            //       x: first.x - second.x + (first.y - second.y),
+            //       y: first.y - second.y,
+            //     };
+            //   };
+            // });
+        </script>
+    </body>
 </html>
