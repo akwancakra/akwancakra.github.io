@@ -5,9 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Akwan's Portfolio</title>
-        <link rel="icon" type="image/x-icon" href="img/logo-akwan.png" />
-        <!-- LOCAL CSS -->
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="img/logo-akwan-new.png" />
         <!-- SCROLL REVEAL -->
         <script src="https://unpkg.com/scrollreveal"></script>
         <!-- SWIPER JS -->
@@ -19,81 +17,9 @@
             href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
             rel="stylesheet"
         />
-        <style>
-            html.sr .load-hidden {
-                visibility: hidden;
-            }
-            /* STYLING HOME */
-
-            .home .texts {
-                max-width: 70vw;
-                margin-right: -50px;
-                margin-bottom: -160px;
-                z-index: 2;
-            }
-
-            .home .texts p {
-                max-width: 45vw;
-            }
-
-            .home .img {
-                height: 380px;
-                width: 270px;
-                min-width: 250px;
-                min-height: 150px;
-            }
-            /* STYLING PROFILE */
-
-            .profile {
-                margin: 35px 0px;
-            }
-
-            .profile .data .img {
-                height: 250px;
-                width: 150px;
-                min-width: 200px;
-                min-height: 100px;
-                background: rgb(144, 144, 144);
-            }
-
-            .profile-swiper .swiper-slide {
-                text-align: center;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                justify-content: around;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-            }
-
-            .profile .swiper-slide {
-                filter: blur(2px);
-                box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-            }
-
-            .profile .swiper-slide-active {
-                filter: none;
-            }
-
-            ::-webkit-scrollbar-track {
-                background-color: #c8c8c8;
-            }
-
-            ::-webkit-scrollbar {
-                width: 12px;
-                background-color: #c8c8c8;
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background-color: #3a424f;
-            }
-        </style>
     </head>
 
-    <body class="bg-gray-800 text-white">
+    <body class="bg-gray-800 text-white font-space">
         <!-- Component Start -->
 
         <div class="main-wrapper p-3 overflow-hidden">
@@ -103,81 +29,81 @@
             >
                 <div class="mr-3 flex flex-col">
                     <button
-                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        type="button"
+                        title="Home"
+                        class="cursor-pointer mb-2 rounded-full py-4 bg-gray-100 px-1 w-3 h-8 transition-all duration-200 ease-in-out hover:bg-gray-200"
                         id="homeNav"
                     ></button>
                     <button
-                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        type="button"
+                        class="cursor-pointer mb-2 rounded-full py-4 bg-gray-100 px-1 w-3 h-8 transition-all duration-200 ease-in-out hover:bg-gray-200"
                         id="profileNav"
+                        title="Profile"
                     ></button>
                     <button
-                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        type="button"
+                        class="cursor-pointer mb-2 rounded-full py-4 bg-gray-100 px-1 w-3 h-8 transition-all duration-200 ease-in-out hover:bg-gray-200"
                         id="educationNav"
+                        title="Education"
                     ></button>
                     <button
-                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
-                        id="workNav"
-                    ></button>
-                    <button
-                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        type="button"
+                        class="cursor-pointer mb-2 rounded-full py-4 bg-gray-100 px-1 w-3 h-8 transition-all duration-200 ease-in-out hover:bg-gray-200"
                         id="projectNav"
+                        title="Projects"
                     ></button>
                     <button
-                        class="cursor-pointer mb-2 rounded-full py-[15px] bg-[#c7c5c5] px-1 w-[10px] h-[30px] transition duration-200 ease-in-out hover:bg-gray-200"
+                        type="button"
+                        class="cursor-pointer mb-2 rounded-full py-4 bg-gray-100 px-1 w-3 h-8 transition-all duration-200 ease-in-out hover:bg-gray-200"
                         id="contactNav"
+                        title="Contact"
                     ></button>
                 </div>
             </div>
 
             <!-- HOME SECTION -->
-            <section class="home h-screen" id="home">
+            <section class="show-from-bottom h-screen" id="home">
                 <div class="flex justify-between relative">
                     <div class="top-left-add absolute">
                         <div class="border border-white w-[70px]"></div>
-                        <div class="border-l-2 border-white h-[30px]"></div>
+                        <div class="border-l-2 border-white h-8"></div>
                     </div>
                     <div class="top-right-add absolute right-0 top-0">
                         <div class="absolute right-0">
-                            <div class="bg-white h-[15px] w-[15px]"></div>
+                            <div class="bg-white h-4 w-4"></div>
                         </div>
                         <div
-                            class="border-t border-r-2 border-white mr-[6px] mt-[6px] w-[120px] h-[50px]"
+                            class="border-t border-r-2 border-white mr-2 mt-2 w-[120px] h-[50px]"
                         >
-                            <span
-                                class="absolute text-[10px] mt-[-8px] ml-[-18px]"
-                                >20</span
-                            >
+                            <span class="absolute text-xs -mt-2 -ml-4">20</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex items-center justify-center h-full">
-                    <div class="texts relative">
-                        <div
-                            class="dots absolute"
-                            style="top: -30px; left: -30px"
-                        >
+                    <div class="texts relative max-w-[70vw] -mr-14 -mb-40 z-10">
+                        <div class="dots absolute -top-8 -left-8">
                             <div class="flex">
                                 <div
-                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                    class="item bg-white h-3 w-3 m-px rounded-full"
                                 ></div>
                                 <div
-                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                    class="item bg-white h-3 w-3 m-px rounded-full"
                                 ></div>
                                 <div
-                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                    class="item bg-white h-3 w-3 m-px rounded-full"
                                 ></div>
                             </div>
                             <div class="flex">
                                 <div
-                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                    class="item bg-white h-3 w-3 m-px rounded-full"
                                 ></div>
                                 <div
-                                    class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                    class="item bg-white h-3 w-3 m-px rounded-full"
                                 ></div>
                             </div>
                             <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                class="item bg-white h-3 w-3 m-px rounded-full"
                             ></div>
                         </div>
                         <h1
@@ -192,7 +118,7 @@
                     </div>
                     <div class="absolute md:relative img-wrapper">
                         <div
-                            class="img bg-gray-400 bg-cover bg-center w-[300px] h-[350px]"
+                            class="img bg-gray-400 bg-cover bg-center w-[400px] h-[530px]"
                         >
                             <img
                                 src="img/akwan.jpg"
@@ -200,24 +126,21 @@
                                 class="h-full w-full object-cover"
                             />
                         </div>
-                        <div
-                            class="dots absolute"
-                            style="bottom: -15px; right: -15px"
-                        >
+                        <div class="dots absolute -bottom-4 -right-4">
                             <div class="flex">
                                 <div
-                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
                                 ></div>
                                 <div
-                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
                                 ></div>
                             </div>
                             <div class="flex">
                                 <div
-                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
                                 ></div>
                                 <div
-                                    class="item h-[10px] w-[10px] bg-white m-px rounded-full"
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
                                 ></div>
                             </div>
                         </div>
@@ -226,158 +149,136 @@
 
                 <!-- THIS ONE -->
                 <div class="flex justify-between relative">
-                    <div
-                        class="bottom-left-add absolute"
-                        style="left: 0; bottom: 20px"
-                    >
+                    <div class="bottom-left-add absolute left-0 bottom-5">
                         <div
-                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
+                            class="relative border-l border-white border-b-2 w-40 h-20 ml-2 -mb-2"
                         >
                             <span
-                                class="absolute text-[10px]"
+                                class="absolute text-xs -ml-2 -mt-9"
                                 style="
                                     writing-mode: vertical-rl;
                                     text-orientation: mixed;
-                                    margin-left: -8px;
-                                    margin-top: -38px;
                                 "
                                 >HOME</span
                             ><span
-                                class="absolute text-[10px]"
-                                style="
-                                    bottom: 0;
-                                    right: 0;
-                                    margin-bottom: -8px;
-                                    margin-right: -28px;
-                                "
+                                class="absolute text-xs -mb-2 -mr-7 bottom-0 right-0"
                                 >WAN</span
                             >
                         </div>
-                        <div
-                            class="absolute bg-white w-[15px] h-[15px]"
-                            style="left: 0"
-                        ></div>
+                        <div class="absolute bg-white w-4 h-4 left-0"></div>
                     </div>
-                    <div class="absolute" style="right: 30px; bottom: 30px">
-                        ✕✕✕
-                    </div>
+                    <div class="absolute right-8 bottom-8">✕✕✕</div>
                 </div>
             </section>
 
             <!-- PROFILE SECTION -->
-            <section class="profile h-fit md:h-screen" id="profile">
-                <div class="h-full w-full flex items-center pb-[50px] md:pb-0">
+            <section
+                class="show-from-bottom my-8 sm:my-0 sm:h-screen"
+                id="profile"
+            >
+                <div
+                    class="flex justify-center items-center h-full w-full pb-[50px] md:pb-0"
+                >
                     <div
                         class="flex w-full flex-col md:flex-row justify-evenly transition-all duration-200"
                     >
-                        <h2 class="font-bold text-[75px] mb-5 md:hidden block">
+                        <h2 class="font-bold text-7xl mb-5 md:hidden block">
                             Profile
                         </h2>
                         <div
-                            class="bg-gray-400 min-h-[500px] max-h-[600px] w-full flex items-end bg-cover bg-center lg:w-[350px] md:w-[300px] h-[350px] relative"
+                            class="bg-gray-400 min-h-[500px] max-h-[600px] w-full flex items-end bg-cover bg-center lg:w-[450px] md:w-[300px] h-[350px] relative"
                         >
                             <img
-                                src="img/akwan.jpg"
+                                src="img/akwan-profile.png"
                                 alt="Gambar akwan cakra"
                                 class="h-full w-full object-cover"
                             />
-                            <div class="dots absolute top-[10px] left-[-10px]">
+                            <div class="dots absolute top-3 left-[-10px]">
                                 <div class="flex">
                                     <div
-                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                        class="item bg-white w-3 h-3 m-px rounded-full"
                                     ></div>
                                     <div
-                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                        class="item bg-white w-3 h-3 m-px rounded-full"
                                     ></div>
                                     <div
-                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                        class="item bg-white w-3 h-3 m-px rounded-full"
                                     ></div>
                                 </div>
                                 <div class="flex">
                                     <div
-                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                        class="item bg-white w-3 h-3 m-px rounded-full"
                                     ></div>
                                     <div
-                                        class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                        class="item bg-white w-3 h-3 m-px rounded-full"
                                     ></div>
                                 </div>
                                 <div
-                                    class="item bg-white w-[10px] h-[10px] m-px rounded-full"
+                                    class="item bg-white w-3 h-3 m-px rounded-full"
                                 ></div>
                             </div>
 
                             <div
-                                class="bg-white w-full text-black p-2 transition-all duration-200 ease-in-out overflow-hidden md:h-[70px] hover:h-64 absolute"
+                                class="flex flex-col justify-between bg-white w-full text-black p-2 overflow-hidden transition-all duration-200 ease-in-out md:h-16 hover:h-fit hover:md:h-full hover:lg:h-80 absolute"
                             >
                                 <div>
-                                    <p class="font-bold text-xl mb-0">
-                                        Akwan Cakra Tajimalela • 19
-                                    </p>
-                                    <p>Student & Web Developer</p>
-                                </div>
-                                <div class="my-3">
-                                    <p>
-                                        I'm interested in programming, design
-                                        and gaming.
-                                    </p>
-                                    <!-- <p>Have 2 months 1 year work experience</p>
-                                  <p>Have created more than 6 projects</p> -->
-                                </div>
-                                <div class="mb-2">
-                                    <p>These are my social media:</p>
-                                    <a
-                                        target="_blank"
-                                        href="https://www.linkedin.com/in/akwan-cakra-tajimalela-a94590171/"
-                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
-                                        ><i
-                                            class="bx bxl-linkedin-square text-[34px]"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        target="_blank"
-                                        href="https://github.com/akwancakra"
-                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
-                                        ><i
-                                            class="bx bxl-github text-[34px]"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        target="_blank"
-                                        href="https://www.facebook.com/Akwancakra666/"
-                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
-                                        ><i
-                                            class="bx bxl-facebook-square text-[34px]"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        target="_blank"
-                                        href="https://www.instagram.com/akwancakra/"
-                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
-                                        ><i
-                                            class="bx bxl-instagram-alt text-[34px]"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        target="_blank"
-                                        href="https://twitter.com/AkwanCakra"
-                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
-                                        ><i
-                                            class="bx bxl-twitter text-[34px]"
-                                        ></i
-                                    ></a>
-                                    <a
-                                        target="_blank"
-                                        href="https://discord.io/babachi"
-                                        class="hover:text-gray-600 transition duration-150 ease-in-out"
-                                        ><i
-                                            class="bx bxl-discord-alt text-[34px]"
-                                        ></i
-                                    ></a>
+                                    <div>
+                                        <p class="font-bold text-xl mb-0">
+                                            Akwan Cakra Tajimalela
+                                        </p>
+                                        <p>UI/UX | Web Dev | Flutter Dev</p>
+                                    </div>
+                                    <div class="my-3">
+                                        <p>
+                                            I'm passionate about UI/UX,
+                                            currently caught up in the
+                                            excitement of Flutter for mobile
+                                            development and diving into web
+                                            development with Next.js. I'm
+                                            particularly intrigued by React and
+                                            Next.js.
+                                        </p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <p>These are my social media:</p>
+                                        <a
+                                            target="_blank"
+                                            href="https://www.linkedin.com/in/akwan-cakra-tajimalela"
+                                            class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                            title="Akwan Cakra Linkedin"
+                                            rel="noopener"
+                                            ><i
+                                                class="bx bxl-linkedin-square text-[34px]"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            target="_blank"
+                                            href="https://github.com/akwancakra"
+                                            class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                            title="Akwan Cakra Github"
+                                            rel="noopener"
+                                            ><i
+                                                class="bx bxl-github text-[34px]"
+                                            ></i
+                                        ></a>
+                                        <a
+                                            target="_blank"
+                                            href="https://www.instagram.com/wan.ckre"
+                                            class="hover:text-gray-600 transition duration-150 ease-in-out"
+                                            title="Akwan Cakra Instagram"
+                                            rel="noopener"
+                                            ><i
+                                                class="bx bxl-instagram-alt text-[34px]"
+                                            ></i
+                                        ></a>
+                                    </div>
                                 </div>
                                 <a
                                     target="_blank"
                                     href="https://mail.google.com/mail/?view=cm&fs=1&to=akwancakra20@gmail.com"
                                     class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                    title="Send me an E-mail"
+                                    rel="noopener"
                                     ><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="h-6 w-6 mr-1"
@@ -408,193 +309,340 @@
                                 >✕✕✕</span
                             >
                             <div
-                                class="mx-auto w-[90%] md md:w-[80vw] md:max-w-[450px]"
+                                class="mx-auto w-full md:w-[80vw] md:max-w-md lg:max-w-xl"
                             >
-                                <p class="font-bold text-[30px]">Skills</p>
+                                <p class="font-bold text-3xl mb-3">Techs</p>
                                 <div
-                                    class="swiper-container profile-swiper h-[250px] overflow-hidden"
+                                    class="tech-swiper overflow-hidden mb-4 relative sm:mb-0"
                                 >
+                                    <div
+                                        class="absolute bg-gradient-to-l from-transparent to-gray-800 h-full w-14 z-10"
+                                    ></div>
                                     <div class="swiper-wrapper">
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    HTML
-                                                </p>
-                                                <p>12 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/html.svg"
+                                                    alt="tech mysql"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/css.svg"
+                                                    alt="tech css"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/bootstrap.svg"
+                                                    alt="tech bootstrap"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    CSS
-                                                </p>
-                                                <p>12 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/tailwind.svg"
+                                                    alt="tech tailwind"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/php.svg"
+                                                    alt="tech php"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/codeigniter.svg"
+                                                    alt="tech codeigniter"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    Javascript
-                                                </p>
-                                                <p>8 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/laravel.svg"
+                                                    alt="tech laravel"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/mysql.svg"
+                                                    alt="tech mysql"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/js.svg"
+                                                    alt="tech js"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    Php
-                                                </p>
-                                                <p>4 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/react.svg"
+                                                    alt="tech react"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/vite.svg"
+                                                    alt="tech vite"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/nodejs.svg"
+                                                    alt="tech nodejs"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    Laravel
-                                                </p>
-                                                <p>3 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/nextjs.svg"
+                                                    alt="tech nextjs"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/ts.svg"
+                                                    alt="tech ts"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/supabase.svg"
+                                                    alt="tech supabase"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    Codeigniter
-                                                </p>
-                                                <p>2 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/cpp.svg"
+                                                    alt="tech cpp"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/flutter.svg"
+                                                    alt="tech flutter"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/dart.svg"
+                                                    alt="tech dart"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    React
-                                                </p>
-                                                <p>3 Projects</p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/firebase.svg"
+                                                    alt="tech firebase"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/figma.svg"
+                                                    alt="tech figma"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/after-effects.svg"
+                                                    alt="tech after-effects"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    MySQL
-                                                </p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/java.svg"
+                                                    alt="tech java"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/prisma.svg"
+                                                    alt="tech prisma"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/graphql.svg"
+                                                    alt="tech graphql"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                         <div
-                                            class="swiper-slide justify-around bg-white text-black overflow-hidden"
+                                            class="flex flex-col gap-4 items-center w-fit h-fit swiper-slide"
                                         >
-                                            <div>
-                                                <p
-                                                    class="text-[35px] font-bold p-2 mb-[-18px]"
-                                                >
-                                                    Git
-                                                </p>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/illustrator.svg"
+                                                    alt="tech illustrator"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
                                             </div>
-                                            <i
-                                                class="bx bxs-chevron-right-square text-[38px]"
-                                            ></i>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/vscode.svg"
+                                                    alt="tech vscode"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-20 w-20 p-2 bg-gray-300 flex justify-center items-center"
+                                            >
+                                                <img
+                                                    src="img/tech/git.svg"
+                                                    alt="tech git"
+                                                    class="bg-center bg-cover w-12 h-12 !fill-gray-800"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
+                                    <div
+                                        class="absolute bg-gradient-to-l from-gray-800 to-transparent h-full w-14 z-10 right-0 top-0"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex justify-between relative">
-                    <div class="bottom-left-add absolute left-0 bottom-[20px]">
+                <div class="flex items-center justify-center h-full">
+                    <div class="bottom-left-add absolute left-0 bottom-2">
                         <div
-                            class="border-l-2 border-b-2 border-white w-[90px] h-[50px] ml-[6px] mb-[-8px]"
+                            class="border-l-2 border-b-2 border-white w-[90px] h-[50px] ml-2 -mb-2"
                         ></div>
                     </div>
                     <div
                         class="bottom-right-add absolute right-0 bottom-[20px]"
                     >
                         <div
-                            class="relative border-b-2 border-white border-r-2 w-[120px] h-[70px] mr-[6px]"
+                            class="relative border-b-2 border-white border-r-2 w-[120px] h-[70px] mr-2"
                         >
                             <span
-                                class="absolute text-[10px] right-0 bottom-0 left-[-45px] bottom-[-8px]"
+                                class="absolute text-xs right-0 left-[-45px] -bottom-2"
                                 >PROFILE</span
                             >
                         </div>
                         <div
-                            class="absolute bg-white h-[15px] w-[15px] mt-[-6px] right-0"
+                            class="absolute bg-white h-4 w-4 mt-[-6px] right-0"
                         ></div>
                     </div>
                 </div>
             </section>
 
             <!-- EDUCATION -->
-            <section class="education h-screen" id="education">
+            <section class="show-from-bottom h-screen" id="education">
                 <div class="flex justify-end relative">
                     <div class="top-right-add absolute right-0 top-0">
-                        <div
-                            class="absolute bg-white h-[15px] w-[15px] right-0"
-                        >
+                        <div class="absolute bg-white h-4 w-4 right-0">
                             <div></div>
                         </div>
                         <div
-                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
+                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-2 mt-2"
                         >
-                            <span
-                                class="absolute text-[10px] mt-[-8px] ml-[-18px]"
-                                >20</span
-                            >
+                            <span class="absolute text-xs -mt-2 -ml-4">20</span>
                         </div>
                         <div></div>
                     </div>
@@ -607,143 +655,89 @@
                             >✕✕✕</span
                         >Educations
                     </h2>
-                    <div class="edu-swiper swiper w-full h-fit z-0">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide edu-item w-fit">
-                                <!-- <div> -->
+                    <div class="flex justify-center items-center h-5/6">
+                        <div class="edu-swiper swiper w-fit h-fit z-0">
+                            <div class="swiper-wrapper">
                                 <div
-                                    class="img bg-cover bg-center w-[300px] h-[350px]"
+                                    class="swiper-slide show-item edu-item w-fit"
                                 >
-                                    <img
-                                        src="img/school_2.png"
-                                        alt="Sekolah SD akwan cakra"
-                                        class="h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div class="texts bg-white text-black p-2">
-                                    <div class="flex justify-between">
-                                        <p
-                                            class="font-bold w-[200px] text-start"
-                                        >
-                                            SDN Jatirahayu 1
-                                        </p>
-                                        <p class="font-bold">Negeri</p>
+                                    <!-- <div> -->
+                                    <div
+                                        class="img bg-cover bg-center w-[400px] h-[350px]"
+                                    >
+                                        <img
+                                            src="img/school_3.png"
+                                            alt="Sekolah SMK akwan cakra"
+                                            class="h-full w-full object-cover"
+                                        />
                                     </div>
-                                    <div class="flex justify-between">
-                                        <p>Passed</p>
-                                        <p>2011-2017</p>
+                                    <div class="texts bg-white text-black p-2">
+                                        <div class="flex justify-between">
+                                            <p class="font-bold text-start">
+                                                SMKN 1 Kota Bekasi
+                                            </p>
+                                            <!-- <p class="font-bold">Negeri</p> -->
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p>Graduated</p>
+                                            <p>2019-2022</p>
+                                        </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
-                                <!-- </div> -->
-                            </div>
-                            <div class="swiper-slide edu-item w-fit">
-                                <!-- <div> -->
                                 <div
-                                    class="img bg-cover bg-center w-[300px] h-[350px]"
+                                    class="swiper-slide show-item edu-item w-fit"
                                 >
-                                    <img
-                                        src="img/school_1.png"
-                                        alt="Sekolah SMP akwan cakra"
-                                        class="h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div class="texts bg-white text-black p-2">
-                                    <div class="flex justify-between">
-                                        <p
-                                            class="font-bold w-[200px] text-start"
-                                        >
-                                            SMPN 20 Kota Bekasi
-                                        </p>
-                                        <p class="font-bold">Negeri</p>
+                                    <!-- <div> -->
+                                    <div
+                                        class="img bg-cover bg-center w-[400px] h-[350px]"
+                                    >
+                                        <img
+                                            src="img/school_4.jpg"
+                                            alt="Universitas akwan cakra"
+                                            class="h-full w-full object-cover"
+                                        />
                                     </div>
-                                    <div class="flex justify-between">
-                                        <p>Passed</p>
-                                        <p>2017-2019</p>
+                                    <div class="texts bg-white text-black p-2">
+                                        <div class="flex justify-between">
+                                            <p class="font-bold text-start">
+                                                Universitas Pendidikan Indonesia
+                                            </p>
+                                            <!-- <p class="font-bold">Negeri</p> -->
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p>On Going</p>
+                                            <p>2022 - Current</p>
+                                        </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
-                                <!-- </div> -->
-                            </div>
-                            <div class="swiper-slide edu-item w-fit">
-                                <!-- <div> -->
-                                <div
-                                    class="img bg-cover bg-center w-[300px] h-[350px]"
-                                >
-                                    <img
-                                        src="img/school_3.png"
-                                        alt="Sekolah SMK akwan cakra"
-                                        class="h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div class="texts bg-white text-black p-2">
-                                    <div class="flex justify-between">
-                                        <p
-                                            class="font-bold w-[200px] text-start"
-                                        >
-                                            SMKN 1 Kota Bekasi
-                                        </p>
-                                        <p class="font-bold">Negeri</p>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <p>Passed</p>
-                                        <p>2019-2022</p>
-                                    </div>
-                                </div>
-                                <!-- </div> -->
-                            </div>
-                            <div class="swiper-slide edu-item w-fit">
-                                <!-- <div> -->
-                                <div
-                                    class="img bg-cover bg-center w-[300px] h-[350px]"
-                                >
-                                    <img
-                                        src="img/school_4.jpg"
-                                        alt="Universitas akwan cakra"
-                                        class="h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div class="texts bg-white text-black p-2">
-                                    <div class="flex justify-between">
-                                        <p
-                                            class="font-bold w-[200px] text-start"
-                                        >
-                                            Universitas Pendidikan Indonesia
-                                        </p>
-                                        <p class="font-bold">Negeri</p>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <p>On Going</p>
-                                        <p>2022 - ~</p>
-                                    </div>
-                                </div>
-                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="dots absolute rotate-180 right-[30px] bottom-[50px]"
-                    >
+                    <div class="dots absolute rotate-180 right-8 bottom-[50px]">
                         <div class="flex">
                             <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                class="item bg-white h-3 w-3 m-px rounded-full"
                             ></div>
                             <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                class="item bg-white h-3 w-3 m-px rounded-full"
                             ></div>
                             <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                class="item bg-white h-3 w-3 m-px rounded-full"
                             ></div>
                         </div>
                         <div class="flex">
                             <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                class="item bg-white h-3 w-3 m-px rounded-full"
                             ></div>
                             <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                                class="item bg-white h-3 w-3 m-px rounded-full"
                             ></div>
                         </div>
                         <div
-                            class="item bg-white h-[10px] w-[10px] m-px rounded-full"
+                            class="item bg-white h-3 w-3 m-px rounded-full"
                         ></div>
                     </div>
                 </div>
@@ -751,129 +745,36 @@
                 <div class="flex justify-start relative">
                     <div class="bottom-left-add absolute left-0 bottom-[20px]">
                         <div
-                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
+                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-2 -mb-2"
                         >
                             <span
-                                class="absolute text-[10px] ml-[-8px] mt-[-60px]"
+                                class="absolute text-xs -ml-2 mt-[-60px]"
                                 style="
                                     writing-mode: vertical-rl;
                                     text-orientation: mixed;
                                 "
                                 >EDUCATION</span
                             ><span
-                                class="absolute text-[10px] right-0 bottom-0 mb-[-8px] mr-[-28px]"
+                                class="absolute text-xs right-0 bottom-0 -mb-2 mr-[-28px]"
                                 >WAN</span
                             >
                         </div>
-                        <div
-                            class="absolute bg-white w-[15px] h-[15px] left-0"
-                        ></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- WORK -->
-            <section class="work h-[80vh]" id="work">
-                <div class="flex justify-end relative">
-                    <div class="top-right-add absolute right-0 top-0">
-                        <div
-                            class="absolute bg-white h-[15px] w-[15px] right-0"
-                        >
-                            <div></div>
-                        </div>
-                        <div
-                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
-                        >
-                            <span
-                                class="absolute text-[10px] mt-[-8px] ml-[-18px]"
-                                >20</span
-                            >
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-
-                <div class="h-full relative">
-                    <h2 class="font-bold text-[75px] relative">
-                        <span
-                            class="absolute text-[14px] opacity-60 left-72 top-[25px]"
-                            >✕✕✕</span
-                        >Works
-                    </h2>
-                    <div class="work-swiper swiper w-full h-fit z-0">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide group workitem w-fit">
-                                I'm currently not working.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="dots absolute rotate-180 bottom-[50px] right-[30px]"
-                    >
-                        <div class="flex">
-                            <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                            ></div>
-                            <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                            ></div>
-                            <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                            ></div>
-                        </div>
-                        <div class="flex">
-                            <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                            ></div>
-                            <div
-                                class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                            ></div>
-                        </div>
-                        <div
-                            class="item bg-white h-[10px] w-[10px] m-px rounded-full"
-                        ></div>
-                    </div>
-                </div>
-
-                <div class="flex justify-start relative">
-                    <div class="bottom-left-add absolute left-0 bottom-[20px]">
-                        <div
-                            class="relative border-l border-white border-b-2 w-[150px] h-[80px] ml-[6px] mb-[-8px]"
-                        >
-                            <span
-                                class="absolute text-[10px] ml-[-8px] mt-[-45px]"
-                                style="
-                                    writing-mode: vertical-rl;
-                                    text-orientation: mixed;
-                                "
-                                >WORKS</span
-                            ><span
-                                class="absolute text-[10px] bottom-0 right-0 mb-[-8px] mr-[-28px]"
-                                >WAN</span
-                            >
-                        </div>
-                        <div
-                            class="absolute bg-white w-[15px] h-[15px] left-0"
-                        ></div>
+                        <div class="absolute bg-white w-4 h-4 left-0"></div>
                     </div>
                 </div>
             </section>
 
             <!-- PROJECTS -->
-            <section class="project" id="project">
+            <section class="show-from-bottom md:h-screen" id="project">
                 <div class="flex justify-end relative">
                     <div class="top-right-add absolute right-0 top-0">
-                        <div
-                            class="absolute bg-white h-[15px] w-[15px] right-0"
-                        >
+                        <div class="absolute bg-white h-4 w-4 right-0">
                             <div></div>
                         </div>
                         <div
-                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-[6px] mt-[6px]"
+                            class="border-t-2 border-r-2 h-[50px] border-white w-[120px] mr-2 mt-2"
                         >
-                            <span
-                                class="absolute text-[10px] mt-[-8px] ml-[-52px]"
+                            <span class="absolute text-xs -mt-2 -ml-16"
                                 >PROJECTS</span
                             >
                         </div>
@@ -884,297 +785,288 @@
                 <div class="h-full relative">
                     <h2 class="font-bold text-[75px] relative">
                         <span
-                            class="absolute text-[14px] opacity-60 left-[79px] bottom-[10px]"
+                            class="absolute text-[14px] opacity-60 left-[79px] bottom-3"
                             >✕✕✕</span
                         >Projects
                     </h2>
 
-                    <div class="mx-auto max-w-7xl">
-                        <div
-                            class="pl-[30px] pr-[40px] grid grid-cols-2 gap-3 max-sm:gap-0 max-sm:grid-cols-1 max-sm:p-0 max-sm:pr-[20px]"
-                        >
+                    <div class="justify-center items-center md:flex md:h-3/4">
+                        <div class="mx-auto max-w-7xl my-8 sm:min-w-[1000px]">
                             <div
-                                class="group relative m-2 bg-gray-400 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px]"
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3"
                             >
-                                <img
-                                    src="img/mockup-4.png"
-                                    alt="Gambar project"
-                                    class="h-full w-full object-cover"
-                                />
                                 <div
-                                    class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
-                                ></div>
-                                <div class="absolute top-0 m-2">
+                                    class="show-item group relative overflow-hidden bg-gray-400 w-full h-[400px] text-black max-sm:w-full max-sm:h-[300px]"
+                                >
+                                    <img
+                                        src="img/projects (2).png"
+                                        alt="Gambar project"
+                                        class="h-full w-full object-cover"
+                                    />
                                     <div
-                                        class="w-[50px] h-[50px] bg-white grid place-content-center"
-                                    >
-                                        <i
-                                            class="bx bx-pin text-[35px] rotate-45"
-                                        ></i>
-                                    </div>
-                                </div>
-                                <h1
-                                    class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
-                                >
-                                    BKK SMKN 1 Kota Bekasi
-                                </h1>
-                                <div
-                                    class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
-                                >
-                                    <div class="p-2">
-                                        <h1 class="font-bold text-[24px]">
-                                            BKK SMKN 1 Kota Bekasi
-                                        </h1>
-                                        <p class="mb-3">
-                                            BKK 1 is an application made for a
-                                            final school project. It is made
-                                            with Laravel as the main framework
-                                            and PHP as the primary programming
-                                            language for the back end and using
-                                            bootstrap as the framework with CSS
-                                            for making it perfect for the front
-                                            end.
-                                        </p>
-                                        <h3 class="font-bold">Created With:</h3>
+                                        class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
+                                    ></div>
+                                    <div class="absolute top-0 m-2">
                                         <div
-                                            class="mb-3 w-fit h-fit grid grid-cols-5 gap-2"
+                                            class="w-[50px] h-[50px] bg-white grid place-content-center"
                                         >
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_html.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-cover"
-                                                        draggable="false"
-                                                    />
+                                            <i
+                                                class="bx bx-pin text-[35px] rotate-45"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <h1
+                                        class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
+                                    >
+                                        E-Voting
+                                    </h1>
+                                    <div
+                                        class="bg-white h-full w-full transition-transform ease-in-out duration-150 absolute top-0 overflow-hidden transform translate-y-full group-hover:translate-y-0"
+                                    >
+                                        <div class="p-2">
+                                            <h1 class="font-bold text-[24px]">
+                                                E-Voting
+                                            </h1>
+                                            <p class="mb-3">
+                                                BKK 1 is an application made for
+                                                a final school project. It is
+                                                made with Laravel as the main
+                                                framework and PHP...
+                                            </p>
+                                            <h3 class="font-bold">
+                                                Created With:
+                                            </h3>
+                                            <div
+                                                class="mb-3 w-fit h-fit flex gap-2"
+                                            >
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/html.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_css.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-cover"
-                                                        draggable="false"
-                                                    />
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/css.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_javascript.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-cover"
-                                                        draggable="false"
-                                                    />
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/ts.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_php.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-cover"
-                                                        draggable="false"
-                                                    />
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/nextjs.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_laravel.jpg"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-cover"
-                                                        draggable="false"
-                                                    />
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/nodejs.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/supabase.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="absolute bottom-0 w-full p-2">
-                                        <a
-                                            target="_blank"
-                                            href="https://github.com/akwancakra/bkksatu"
-                                            class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                                            >See Details</a
+                                        <div
+                                            class="absolute bottom-0 w-full p-2"
                                         >
+                                            <a
+                                                href="projects/e-voting.html"
+                                                title="See Details"
+                                                class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                                rel="noopener"
+                                                >See Details</a
+                                            >
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div
-                                class="group relative m-2 bg-gray-400 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px]"
-                            >
-                                <img
-                                    src="img/mockup-1.png"
-                                    alt="Gambar project"
-                                    class="h-full w-full object-cover"
-                                />
                                 <div
-                                    class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
-                                ></div>
-                                <div class="absolute top-0 m-2">
+                                    class="show-item group relative overflow-hidden bg-gray-400 w-full h-[400px] text-black max-sm:w-full max-sm:h-[300px]"
+                                >
+                                    <img
+                                        src="img/projects (3).png"
+                                        alt="Gambar project"
+                                        class="h-full w-full object-cover"
+                                    />
                                     <div
-                                        class="w-[50px] h-[50px] bg-white grid place-content-center"
-                                    >
-                                        <i
-                                            class="bx bx-pin text-[35px] rotate-45"
-                                        ></i>
-                                    </div>
-                                </div>
-                                <h1
-                                    class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
-                                >
-                                    Futsin
-                                </h1>
-                                <div
-                                    class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
-                                >
-                                    <div class="p-2">
-                                        <h1 class="font-bold text-[24px]">
-                                            Futsin
-                                        </h1>
-                                        <p class="mb-3">
-                                            Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quam
-                                            voluptatibus dignissimos quia, ipsa
-                                            quod odit inventore aliquam expedita
-                                            rerum voluptatem.
-                                        </p>
-                                        <h3 class="font-bold">Created With:</h3>
+                                        class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
+                                    ></div>
+                                    <div class="absolute top-0 m-2">
                                         <div
-                                            class="mb-3 w-fit h-fit grid grid-cols-4 gap-2"
+                                            class="w-[50px] h-[50px] bg-white grid place-content-center"
                                         >
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_cpp.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-contain"
-                                                        draggable="false"
-                                                    />
+                                            <i
+                                                class="bx bx-pin text-[35px] rotate-45"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <h1
+                                        class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
+                                    >
+                                        QuraLearn
+                                    </h1>
+                                    <div
+                                        class="bg-white h-full w-full transition-transform ease-in-out duration-150 absolute top-0 overflow-hidden transform translate-y-full group-hover:translate-y-0"
+                                    >
+                                        <div class="p-2">
+                                            <h1 class="font-bold text-[24px]">
+                                                QuraLearn
+                                            </h1>
+                                            <p class="mb-3">
+                                                Lorem ipsum dolor sit, amet
+                                                consectetur adipisicing elit.
+                                                Quam voluptatibus dignissimos
+                                                quia, ipsa quod odit inventore
+                                                aliquam expedita rerum...
+                                            </p>
+                                            <h3 class="font-bold">
+                                                Created With:
+                                            </h3>
+                                            <div
+                                                class="mb-3 w-fit h-fit flex gap-2"
+                                            >
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/html.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-contain"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/css.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/js.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/vite.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/nodejs.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="p-1">
+                                                    <div
+                                                        class="w-[35px] h-[35px]"
+                                                    >
+                                                        <img
+                                                            src="img/tech/mysql.svg"
+                                                            alt="Gambar icon"
+                                                            class="h-full w-full object-cover"
+                                                            draggable="false"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="absolute bottom-0 w-full p-2">
-                                        <a
-                                            target="_blank"
-                                            href="https://github.com/akwancakra/reservasi-futsal"
-                                            class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                                            >See Details</a
+                                        <div
+                                            class="absolute bottom-0 w-full p-2"
                                         >
+                                            <a
+                                                href="projects/quralearn.html"
+                                                title="See Details"
+                                                class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                                rel="noopener"
+                                                >See Details</a
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            class="grid grid-cols-4 max-sm:grid-cols-1 max-sm:pr-[20px]"
-                        >
-                            <div
-                                class="group relative m-2 bg-gray-400 col-start-2 col-span-2 w-[100%] h-[300px] text-black max-sm:w-[100%] max-sm:h-[300px] max-sm:col-span-1"
-                            >
-                                <img
-                                    src="img/mockup-3.png"
-                                    alt="Gambar project"
-                                    class="h-full w-full object-cover"
-                                />
-                                <div
-                                    class="bg-gray-700 w-full h-full bg-opacity-50 absolute top-0"
-                                ></div>
-                                <div class="absolute top-0 m-2">
-                                    <div
-                                        class="w-[50px] h-[50px] bg-white grid place-content-center"
-                                    >
-                                        <i
-                                            class="bx bx-pin text-[35px] rotate-45"
-                                        ></i>
-                                    </div>
-                                </div>
-                                <h1
-                                    class="absolute bottom-0 m-2 font-bold text-[24px] bg-white px-2"
+                            <div class="flex justify-center">
+                                <a
+                                    class="w-full cursor-pointer flex items-center justify-center px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-bold hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out sm:w-fit"
+                                    href="projects.html"
                                 >
-                                    Aplis
-                                </h1>
-                                <div
-                                    class="bg-white h-full w-full transition duration-150 ease-in-out absolute top-0 overflow-hidden opacity-0 group-hover:opacity-100"
-                                >
-                                    <div class="p-2">
-                                        <h1 class="font-bold text-[24px]">
-                                            Aplis
-                                        </h1>
-                                        <p class="mb-3">
-                                            Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quam
-                                            voluptatibus dignissimos quia, ipsa
-                                            quod odit inventore aliquam expedita
-                                            rerum voluptatem.
-                                        </p>
-                                        <h3 class="font-bold">Created With:</h3>
-                                        <div
-                                            class="mb-3 w-fit h-fit grid grid-cols-5 gap-2"
-                                        >
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_html.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-contain"
-                                                        draggable="false"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_css.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-contain"
-                                                        draggable="false"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_react.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-contain"
-                                                        draggable="false"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_typescript.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-contain"
-                                                        draggable="false"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="p-1">
-                                                <div class="w-[35px] h-[35px]">
-                                                    <img
-                                                        src="img/PIC_node.png"
-                                                        alt="Gambar icon"
-                                                        class="h-full w-full object-contain"
-                                                        draggable="false"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="absolute bottom-0 w-full p-2">
-                                        <a
-                                            target="_blank"
-                                            href="https://github.com/akwancakra/secs-frontend-final"
-                                            class="flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray font-medium leading-tight shadow-md hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                                            >See Details</a
-                                        >
-                                    </div>
-                                </div>
+                                    See More
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1182,19 +1074,19 @@
             </section>
 
             <!-- FORM -->
-            <section class="contact h-screen mt-5 bg-gray-800" id="contact">
+            <section
+                class="show-from-bottom sm:h-screen mt-5 bg-gray-800"
+                id="contact"
+            >
                 <div class="flex justify-end relative">
                     <div class="top-right-add absolute right-0 top-0">
-                        <div
-                            class="absolute bg-white h-[15px] w-[15px] right-0"
-                        >
+                        <div class="absolute bg-white h-4 w-4 right-0">
                             <div></div>
                         </div>
                         <div
-                            class="border-t-2 border-r-2 h-[90px] border-white w-[70px] mr-[6px] mt-[6px]"
+                            class="border-t-2 border-r-2 h-[90px] border-white w-[70px] mr-2 mt-2"
                         >
-                            <span
-                                class="absolute text-[10px] mt-[-8px] ml-[-52px]"
+                            <span class="absolute text-xs -mt-2 ml-[-52px]"
                                 >CONTACT</span
                             >
                         </div>
@@ -1202,100 +1094,110 @@
                     </div>
                 </div>
 
-                <div class="grid place-items-center h-screen">
-                    <div>
-                        <div class="h-full w-full">
-                            <h2 class="md:text-center font-bold text-[70px]">
-                                Contact Me
-                            </h2>
+                <div class="grid h-full">
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="md:text-center font-bold text-[70px] -mb-5">
+                            Get In Touch
+                        </h2>
+                        <p>Let's connect and create something amazing!</p>
+                    </div>
 
-                            <div class="flex justify-center">
-                                <form
-                                    id="my-form"
-                                    action="https://formspree.io/f/xpzgpadr"
-                                    method="POST"
-                                    class="w-full md:w-[500px]"
-                                >
-                                    <div
-                                        id="feedback-form"
-                                        class="w-full p-3 mb-3 bg-slate-400 hidden items-center gap-1"
-                                    >
-                                        <i
-                                            class="bx bx-info-circle text-gray-900"
-                                        ></i>
-                                        <p
-                                            id="my-form-status"
-                                            class="text-gray-900"
-                                        >
-                                            Terima kasih atas kiriman Anda
-                                        </p>
-                                    </div>
-
-                                    <div class="relative mb-5">
-                                        <input
-                                            id="floating_outlined"
-                                            type="email"
-                                            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
-                                            placeholder=" "
-                                            name="email"
-                                        />
-                                        <label
-                                            for="floating_outlined"
-                                            class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
-                                            >E-mail</label
-                                        >
-                                    </div>
-                                    <div class="relative mb-5">
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            rows="10"
-                                            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
-                                        ></textarea>
-                                        <label
-                                            for="message"
-                                            class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
-                                            >Message</label
-                                        >
-                                    </div>
-                                    <div>
-                                        <button
-                                            id="my-form-button"
-                                            type="submit"
-                                            class="w-full flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-bold hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
-                                        >
-                                            Submit
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div
-                                class="dots absolute bottom-[250px] left-[45px]"
+                    <div class="h-full w-full sm:flex justify-center gap-3">
+                        <div
+                            class="flex flex-col justify-start items-center my-5 sm:my-0"
+                        >
+                            <div class="bg-gray-300 w-48 h-64 mb-3"></div>
+                            <a
+                                class="inline-block w-fit px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-bold hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                href="projects.html"
                             >
-                                <div class="flex">
-                                    <div
-                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                                    ></div>
-                                    <div
-                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                                    ></div>
-                                </div>
-                                <div class="flex">
-                                    <div
-                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                                    ></div>
-                                    <div
-                                        class="item h-[10px] w-[10px] bg-white m-px rounded-full"
-                                    ></div>
-                                </div>
-                            </div>
-
-                            <span
-                                class="absolute text-[14px] right-[95px] bottom-[45px]"
-                                >✕✕✕</span
-                            >
+                                Download CV
+                            </a>
                         </div>
+                        <div class="flex justify-center">
+                            <form
+                                id="my-form"
+                                action="https://formspree.io/f/xpzgpadr"
+                                method="POST"
+                                class="w-full md:w-[600px]"
+                            >
+                                <div
+                                    id="feedback-form"
+                                    class="w-full p-3 mb-3 bg-slate-400 hidden items-center gap-1"
+                                >
+                                    <i
+                                        class="bx bx-info-circle text-gray-900"
+                                    ></i>
+                                    <p
+                                        id="my-form-status"
+                                        class="text-gray-900"
+                                    >
+                                        Terima kasih atas kiriman Anda
+                                    </p>
+                                </div>
+
+                                <div class="relative mb-5">
+                                    <input
+                                        id="floating_outlined"
+                                        type="email"
+                                        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
+                                        placeholder=" "
+                                        name="email"
+                                    />
+                                    <label
+                                        for="floating_outlined"
+                                        class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                                        >E-mail</label
+                                    >
+                                </div>
+                                <div class="relative mb-5">
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="10"
+                                        class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white border-2 border-gray-800 appearance-none dark:border-gray-600 dark:focus:border-gray-900 focus:outline-none focus:ring-0 focus:border-gray-900 peer"
+                                    ></textarea>
+                                    <label
+                                        for="message"
+                                        class="absolute font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-grayborder-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+                                        >Message</label
+                                    >
+                                </div>
+                                <div>
+                                    <button
+                                        id="my-form-button"
+                                        type="submit"
+                                        class="w-full flex items-center justify-center py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-bold hover:bg-gray-700 hover:text-white hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:text-white active:bg-gray-800 active:shadow-lg active:text-white transition duration-150 ease-in-out"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="dots absolute bottom-[250px] left-[45px]">
+                            <div class="flex">
+                                <div
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
+                                ></div>
+                            </div>
+                            <div class="flex">
+                                <div
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
+                                ></div>
+                                <div
+                                    class="item h-3 w-3 bg-white m-px rounded-full"
+                                ></div>
+                            </div>
+                        </div>
+
+                        <span
+                            class="absolute text-[14px] right-[95px] bottom-[45px]"
+                            >✕✕✕</span
+                        >
                     </div>
                 </div>
             </section>
@@ -1307,6 +1209,7 @@
         <!-- SWIPER JS -->
         <script src="js/swiper/swiper-bundle.js"></script>
         <script src="js/swiper/swiper-bundle.min.js"></script>
+        <script src="js/animate-show.js"></script>
         <!-- EMAIL -->
         <script>
             var form = document.getElementById("my-form");
@@ -1359,126 +1262,107 @@
 
         <script>
             $(document).ready(function () {
-                $("#homeNav").click(function () {
-                    $("html, body").animate(
-                        { scrollTop: $("#home").offset().top },
-                        300
-                    );
-                });
-                $("#profileNav").click(function () {
-                    $("html, body").animate(
-                        { scrollTop: $("#profile").offset().top },
-                        300
-                    );
-                });
-                $("#educationNav").click(function () {
-                    $("html, body").animate(
-                        { scrollTop: $("#education").offset().top },
-                        300
-                    );
-                });
-                $("#workNav").click(function () {
-                    $("html, body").animate(
-                        { scrollTop: $("#work").offset().top },
-                        300
-                    );
-                });
-                $("#projectNav").click(function () {
-                    $("html, body").animate(
-                        { scrollTop: $("#project").offset().top },
-                        300
-                    );
-                });
-                $("#contactNav").click(function () {
-                    $("html, body").animate(
-                        { scrollTop: $("#contact").offset().top },
-                        300
-                    );
+                // Fungsi untuk menambahkan event click untuk setiap navigasi
+                function addNavClickEvent(navId, targetId) {
+                    $(navId).click(function () {
+                        $("html, body").animate(
+                            { scrollTop: $(targetId).offset().top },
+                            300
+                        );
+                    });
+                }
+
+                // Daftar navigasi dan target scroll
+                var navItems = [
+                    { navId: "#homeNav", targetId: "#home" },
+                    { navId: "#profileNav", targetId: "#profile" },
+                    { navId: "#educationNav", targetId: "#education" },
+                    { navId: "#projectNav", targetId: "#project" },
+                    { navId: "#contactNav", targetId: "#contact" },
+                ];
+
+                // Menambahkan event click untuk setiap navigasi
+                navItems.forEach(function (item) {
+                    addNavClickEvent(item.navId, item.targetId);
                 });
 
                 $(window).scroll(function () {
-                    if ($(window).scrollTop() < $("#profile").offset().top) {
-                        $("#profileNav").removeClass("h-[85px]");
-                        $("#profileNav").addClass("h-[30px]");
+                    var scrollTop = $(window).scrollTop();
 
-                        $("#homeNav").removeClass("h-[30px]");
-                        $("#homeNav").addClass("h-[85px]");
+                    if (scrollTop < $("#profile").offset().top) {
+                        $("#profileNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
+
+                        $("#homeNav").addClass("h-[85px]").removeClass("h-8");
                     } else if (
-                        $(window).scrollTop() < $("#education").offset().top &&
-                        $(window).scrollTop() > $("#home").offset().top
+                        scrollTop < $("#education").offset().top &&
+                        scrollTop > $("#home").offset().top
                     ) {
-                        $("#homeNav").removeClass("h-[85px]");
-                        $("#homeNav").addClass("h-[30px]");
+                        $("#homeNav").addClass("h-8").removeClass("h-[85px]");
 
-                        $("#profileNav").removeClass("h-[30px]");
-                        $("#profileNav").addClass("h-[85px]");
+                        $("#profileNav")
+                            .addClass("h-[85px]")
+                            .removeClass("h-8");
 
-                        $("#educationNav").removeClass("h-[85px]");
-                        $("#educationNav").addClass("h-[30px]");
+                        $("#educationNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
                     } else if (
-                        $(window).scrollTop() < $("#work").offset().top &&
-                        $(window).scrollTop() > $("#profile").offset().top
+                        scrollTop < $("#project").offset().top &&
+                        scrollTop > $("#profile").offset().top
                     ) {
-                        $("#profileNav").removeClass("h-[85px]");
-                        $("#profileNav").addClass("h-[30px]");
+                        $("#profileNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
 
-                        $("#educationNav").removeClass("h-[30px]");
-                        $("#educationNav").addClass("h-[85px]");
+                        $("#educationNav")
+                            .addClass("h-[85px]")
+                            .removeClass("h-8");
 
-                        $("#workNav").removeClass("h-[85px]");
-                        $("#workNav").addClass("h-[30px]");
+                        $("#projectNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
                     } else if (
-                        $(window).scrollTop() < $("#project").offset().top &&
-                        $(window).scrollTop() > $("#education").offset().top
+                        scrollTop < $("#contact").offset().top &&
+                        scrollTop > $("#education").offset().top
                     ) {
-                        $("#educationNav").removeClass("h-[85px]");
-                        $("#educationNav").addClass("h-[30px]");
+                        $("#educationNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
 
-                        $("#workNav").removeClass("h-[30px]");
-                        $("#workNav").addClass("h-[85px]");
+                        $("#projectNav")
+                            .addClass("h-[85px]")
+                            .removeClass("h-8");
 
-                        $("#projectNav").removeClass("h-[85px]");
-                        $("#projectNav").addClass("h-[30px]");
-                    } else if (
-                        $(window).scrollTop() < $("#contact").offset().top &&
-                        $(window).scrollTop() > $("#work").offset().top
-                    ) {
-                        $("#workNav").removeClass("h-[85px]");
-                        $("#workNav").addClass("h-[30px]");
-
-                        $("#projectNav").removeClass("h-[30px]");
-                        $("#projectNav").addClass("h-[85px]");
-
-                        $("#contactNav").removeClass("h-[85px]");
-                        $("#contactNav").addClass("h-[30px]");
+                        $("#contactNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
                     } else {
-                        $("#projectNav").removeClass("h-[85px]");
-                        $("#projectNav").addClass("h-[30px]");
+                        $("#contactNav")
+                            .addClass("h-[85px]")
+                            .removeClass("h-8");
 
-                        $("#contactNav").removeClass("h-[30px]");
-                        $("#contactNav").addClass("h-[85px]");
+                        $("#projectNav")
+                            .addClass("h-8")
+                            .removeClass("h-[85px]");
                     }
                 });
             });
 
-            let swiper = new Swiper(".profile-swiper", {
-                direction: "vertical",
-                loop: false,
+            let techSwiper = new Swiper(".tech-swiper", {
                 grabCursor: true,
-                slidesPerView: 2,
-                centeredSlides: true,
-                effect: "coverflow",
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                },
+                slidesPerView: "auto",
+                spaceBetween: 14,
                 autoplay: {
-                    delay: 1500,
+                    delay: 0,
+                    pauseOnMouseEnter: false,
                     disableOnInteraction: false,
                 },
+                speed: 1200,
+                loop: true,
+                freeMode: false,
+                freeModeMomentum: false,
             });
 
             let eduSwiper = new Swiper(".edu-swiper", {
@@ -1486,86 +1370,6 @@
                 slidesPerView: "auto",
                 spaceBetween: 30,
             });
-
-            let workSwiper = new Swiper(".work-swiper", {
-                grabCursor: true,
-                slidesPerView: "auto",
-                spaceBetween: 30,
-            });
-
-            ScrollReveal({
-                reset: true,
-            });
-
-            ScrollReveal().reveal(".home-img", {
-                delay: 500,
-                rotate: {
-                    x: 20,
-                    z: 20,
-                },
-            });
-
-            ScrollReveal().reveal(".text", {
-                delay: 500,
-            });
-
-            ScrollReveal().reveal(".home", {
-                origin: "bottom",
-                distance: "50px",
-                easing: "cubic-bezier(.37,.01,.74,1)",
-            });
-
-            ScrollReveal().reveal(".profile", {
-                origin: "bottom",
-                distance: "50px",
-                easing: "cubic-bezier(.37,.01,.74,1)",
-            });
-
-            ScrollReveal().reveal(".education", {
-                origin: "bottom",
-                distance: "50px",
-                easing: "cubic-bezier(.37,.01,.74,1)",
-            });
-
-            ScrollReveal().reveal(".work", {
-                origin: "bottom",
-                distance: "50px",
-                easing: "cubic-bezier(.37,.01,.74,1)",
-            });
-
-            ScrollReveal().reveal(".project-item", {
-                interval: 200,
-            });
-
-            ScrollReveal().reveal(".project", {
-                origin: "bottom",
-                distance: "50px",
-                easing: "cubic-bezier(.37,.01,.74,1)",
-            });
-
-            ScrollReveal().reveal(".contact", {
-                origin: "bottom",
-                distance: "50px",
-                easing: "cubic-bezier(.37,.01,.74,1)",
-            });
-
-            // $(function () {
-            //   $(".owl-carousel").owlCarousel({
-            //     items: 1,
-            //     loop: false,
-            //     nav: false,
-            //     margin: 0,
-            //   });
-            //   $(".owl-carousel").data("owl.carousel").difference = function (
-            //     first,
-            //     second
-            //   ) {
-            //     return {
-            //       x: first.x - second.x + (first.y - second.y),
-            //       y: first.y - second.y,
-            //     };
-            //   };
-            // });
         </script>
     </body>
 </html>

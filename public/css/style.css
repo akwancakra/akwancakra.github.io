@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 * {
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -21,4 +21,18 @@
     -moz-border-radius: 20px!important;
     -ms-border-radius: 20px!important;
     -o-border-radius: 20px!important;
+} */
+
+/*
+.profile-swiper .swiper-slide {
+    @apply text-center flex items-center;
 }
+
+.profile .swiper-slide {
+    @apply filter blur-sm [box-shadow:0_15px_50px_rgba(0,_0,_0,_0.2)];
+}
+
+.profile .swiper-slide-active {
+    @apply filter-none;
+}
+*/
