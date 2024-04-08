@@ -651,8 +651,8 @@ video {
   left: 95px;
 }
 
-.top-\[25px\] {
-  top: 25px;
+.top-14 {
+  top: 3.5rem;
 }
 
 .bottom-\[50px\] {
@@ -697,22 +697,6 @@ video {
 
 .-bottom-8 {
   bottom: -2rem;
-}
-
-.top-4 {
-  top: 1rem;
-}
-
-.top-8 {
-  top: 2rem;
-}
-
-.top-12 {
-  top: 3rem;
-}
-
-.top-14 {
-  top: 3.5rem;
 }
 
 .z-10 {
@@ -831,6 +815,10 @@ video {
   margin-top: -6px;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-\[-60px\] {
   margin-top: -60px;
 }
@@ -851,10 +839,6 @@ video {
   margin-left: -52px;
 }
 
-.-mb-5 {
-  margin-bottom: -1.25rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
@@ -869,10 +853,6 @@ video {
 
 .ml-5 {
   margin-left: 1.25rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -1021,10 +1001,6 @@ video {
   width: fit-content;
 }
 
-.w-\[400px\] {
-  width: 400px;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1051,6 +1027,10 @@ video {
 
 .w-\[90px\] {
   width: 90px;
+}
+
+.w-\[400px\] {
+  width: 400px;
 }
 
 .w-\[150px\] {
@@ -1446,8 +1426,8 @@ video {
   line-height: 1;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -1481,23 +1461,19 @@ video {
   font-size: 24px;
 }
 
-.text-\[70px\] {
-  font-size: 70px;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1862,6 +1838,10 @@ html.sr .load-hidden {
     height: 100vh;
   }
 
+  .sm\:w-\[400px\] {
+    width: 400px;
+  }
+
   .sm\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1875,10 +1855,6 @@ html.sr .load-hidden {
     width: 60%;
   }
 
-  .sm\:w-\[400px\] {
-    width: 400px;
-  }
-
   .sm\:min-w-\[1000px\] {
     min-width: 1000px;
   }
@@ -1887,13 +1863,13 @@ html.sr .load-hidden {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:text-\[75px\] {
-    font-size: 75px;
-  }
-
   .sm\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .sm\:text-\[75px\] {
+    font-size: 75px;
   }
 
   .sm\:text-\[70px\] {
